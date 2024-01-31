@@ -1,0 +1,138 @@
+.login h3 {
+    color: #b27748;
+  }
+  
+  .login p {
+    color: #5a381c;
+  }
+  
+  .login-button {
+      color: white;
+    }
+  
+  /* .login-page .badan {
+      max-width: 400px
+  } */
+  
+  .masuk {
+    background: linear-gradient(to right, #e2c7b3, #fbefe1, #e9d8c5);
+    /* overflow: hidden; */
+    /* max-height: 100vh; */
+  }
+  
+  .login .apple {
+    border: 0;
+    background: transparent;
+    box-shadow: 0 0 0 0;
+  }
+  
+  /* Hapus gaya default dari checkbox */
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative;
+    background-color: #eca66f;
+    border-radius: 6px;
+    vertical-align: middle;
+  }
+  
+  /* Gaya tanda ceklis saat checkbox dicentang */
+  input[type="checkbox"]:checked {
+  }
+  
+  /* Gaya tanda ceklis (centang) di dalam checkbox */
+  input[type="checkbox"]:checked::before {
+    content: "\2713"; /* tanda centang ✓ */
+    font-size: 12px; /* ukuran centang */
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .login button {
+    background: linear-gradient(180deg, #ffb880 0%, #cf8e5b 100%);
+    box-shadow: 0px 12px 25px 0px rgba(255, 184, 128, 0.8);
+  }
+  
+  .badan .email {
+    border-radius: 12px;
+    background: #f2e3d5;
+    box-shadow: 6px 6px 12px 0px #e7d6c6,
+      -6px -6px 12px 0px rgba(248, 246, 245, 0.6);
+  }
+  
+  .google button {
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  .badan .akun {
+    border: 2px solid var(--netral-20, #808080);
+  }
+  
+  .login-page .badan .akun input::placeholder {
+    font-size: 14px;
+  }
+  
+  /* SMALL */
+  @media (min-width: 319px) {
+    /* .login-page {
+        padding: 0 10px;
+    } */
+    .orang {
+        /* margin: 0 -64px 0 0; */
+      }
+  
+    .badan .eye {
+        margin: 0 0 0 -10px;
+    }
+  
+    .rememberme p {
+      font-size: 12px;
+    }
+  
+    .login-page .login {
+      padding: 0 20px;
+    }
+  }
+  
+  /* MEDIUM */
+  @media (min-width: 767px) {
+    .orang {
+        margin: 0 -72px 0 0;
+      }
+  
+      .login-page .login {
+        padding: 0 100px;
+      }
+  }
+  
+  /* LAPTOP */
+  @media (min-width: 1024px) {
+  .orang {
+    margin: 34px 0 0 32px;
+  }
+  .orang-signup {
+    margin: 0 0 0 32px;
+  }
+  
+  .login-page .login {
+    padding: 0 40px;
+  }
+  }
+  
+  /* LAPTOP L*/
+  @media (min-width: 1440px) {
+  .orang {
+    width: 500px;
+    margin:0 -280px 0 0;
+  }
+  }
+  
