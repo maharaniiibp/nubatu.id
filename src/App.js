@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Login from './pages/login';
-import beranda from "./pages/beranda";
+import Beranda from "./pages/beranda";
+import Nderektanglet from "./pages/nderektanglet";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/beranda" element={<beranda />} />
+          <Route path="/beranda" element={<Beranda />} />
+          <Route path="/nderektanglet" element={<Nderektanglet />} />
         </Routes>
       </div>
     </Router>
