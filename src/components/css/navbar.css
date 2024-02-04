@@ -1,0 +1,30 @@
+.navbar {
+  height: 136px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  background-color: #EDF6F0;
+  /* border-bottom: 1px solid lightgray; */
+
+  .navbarContainer {
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+
+    .pageName p {
+      font-size: 36px;
+      font-weight: semi-bold;
+    }
+
+  .photo {
+    width: 56px;
+    height: 56px;
+    border-radius: 50px;
+    border: 3px solid #009B4C;
+  }
+  }
+}
