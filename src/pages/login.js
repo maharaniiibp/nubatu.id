@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import "./csspages/login.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons
 
@@ -20,6 +20,17 @@ const Login = () => {
       window.alert("Invalid credentials. Please try again.");
     }
   };
+  
+  const [ setToken] = useState("");
+useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    if (storedToken) {
+      setToken(storedToken);
+    } else {
+      alert("Anda harus login untuk mengakses halaman ini");
+      window.location.href = "/";
+    }
+  }, []);
 
   return (
     <section className="vh-100">

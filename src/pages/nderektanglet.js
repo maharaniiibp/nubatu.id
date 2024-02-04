@@ -98,7 +98,7 @@ const NderekTanglet = () => {
             style={{ cursor: "pointer", marginLeft: "55%" }}
             className="border border-success rounded p-2 px-8 d-flex align-items-center"
           >
-            <span className="me-2 fw-bold">Pencarian</span>
+            <span className="mr-2 me-2 fw-bold">Pencarian</span>
             <img
               style={{
                 width: 20,

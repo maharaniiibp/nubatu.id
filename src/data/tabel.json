@@ -1,17 +1,23 @@
 [
-    {
-        "name": "Ziyad Ahmad Baharuddin",
-        "email": "ziyadbaharuddin@gmail.com",
-        "question": "Izin bertanya pak kiai, katanya boleh tidak seorang Muslim menghadi...S",
-        "tanggal": "Sep 26, 2023",
-        "img": "../assets/yellow.svg"
-      },
-      {
-            "name": "Ziyad Ahmad Baharuddin",
-            "email": "ziyadbaharuddin@gmail.com",
-            "question": "Izin bertanya pak kiai, katanya boleh tidak seorang Muslim menghadi...S",
-            "tanggal": "Sep 26, 2023",
-            "img": "../assets/yellow.svg"
-          }
-   
+  {
+    "id": 1,
+    "name": "Ziyad Ahmad Baharuddin",
+    "email": "ziyadbaharuddin@gmail.com",
+    "message": "Izin bertanya pak kiai, katanya boleh tidak seorang Muslim menghadi...",
+    "date": "Sep 26, 2023"
+  },
+  {
+    "id": 2,
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "date": "Oct 10, 2023"
+  },
+  {
+    "id": 3,
+    "name": "Jane Doe",
+    "email": "janedoe@example.com",
+    "message": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "date": "Nov 15, 2023"
+  }
 ]
