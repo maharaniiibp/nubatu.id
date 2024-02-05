@@ -15,6 +15,12 @@
     justify-content: space-between;
     padding: 0 40px;
 
+    .navKanan {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
     .pageName p {
       font-size: 36px;
       font-weight: semi-bold;
@@ -26,5 +32,38 @@
     border-radius: 50px;
     border: 3px solid #009B4C;
   }
+  }
+}
+
+.simpanPengajuan {
+  background-color: transparent;
+  padding: 15px;
+  border: 1px solid #BFBFBF;
+  color: black;
+  font-size: 16px;
+  font-weight: semi-bold;
+  border-radius: 10px;
+}
+
+.verifikasiProgram {
+  padding: 15px;
+  background-color: #078D41;
+color: white;
+font-size: 16px;
+font-weight: semi-bold;
+border-radius: 10px;
+border: none;
+}
+
+.navKiri {
+  .pageName {
+  span: 16px;
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
+  .arrowLeft {
+    width: 24px;
   }
 }

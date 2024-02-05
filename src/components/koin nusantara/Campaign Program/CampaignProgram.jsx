@@ -6,6 +6,7 @@ import dataTable from "../../../data/campaign.json";
 import Status from "./Status";
 import DataNama from "./DataNama";
 import { Search } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const CampaignProgram = ({ data }) => {
   const [jsonData, setJsonData] = useState([]);
@@ -211,6 +212,15 @@ const CampaignProgram = ({ data }) => {
           <Status />
         </div>
       </div>
+
+      {/* ============= */}
+      {/* button tambah program  */}
+      {/* <Link to="/addProgram">
+        <button className="addProgram">
+          Tambah Program
+          <img src="./koinNusantara/plus.svg" alt="" />
+        </button>
+      </Link> */}
     </>
   );
 };

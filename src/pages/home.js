@@ -3,17 +3,14 @@ import "./css/home.css"
 import Sidebar from "../components/Sidebar"
 import Navbar from "../components/Navbar"
 import Campaign from "../components/koin nusantara/Campaign Program/CampaignProgram"
+import AddProgram from "../components/koin nusantara/Campaign Program/addProgram"
 
 const home = () => {
   return (
     <>
       <div className="home">
-      <Sidebar />
         <div className="homeContainer">
-          <Navbar />
-          <div className="campaign">
-            <Campaign />
-          </div>
+          
        </div>
         </div>
       </>

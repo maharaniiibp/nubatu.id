@@ -253,3 +253,18 @@
     }
   }
 }
+
+.navbar {
+.addProgram {
+  padding: 15px;
+  background-color: #078D41;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: semi-bold;
+}
+}
