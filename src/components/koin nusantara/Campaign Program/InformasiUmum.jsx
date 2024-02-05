@@ -49,10 +49,13 @@ const InformasiUmum = () => {
               </div>
               <tr></tr>
             </div>
-          </Col>
+                  </Col>
+                  
+                  
           <Col className="kanan">
             <h3>Gambar sampul</h3>
-            <div className="top">
+                      <div className="top">
+                          
               {files && (
                 <div className="uploads">
                   <ul>
@@ -114,7 +117,7 @@ const InformasiUmum = () => {
                       </div>
                       
                       {/* ====================== */}
-                      <form action=""
+                      {/* <form action=""
                       onClick={() => document.querySelector(".input-field").click()}>
                           <input type="file" accept="image/*" className="input-field" hidden
                               onChange={({ target: { files } }) => {
@@ -125,7 +128,7 @@ const InformasiUmum = () => {
                           }} />
                           {image ? 
                               <img src={image} width={150} height={150} alt={fileName} /> : "ayo upload"   }
-                      </form>
+                      </form> */}
 
                       
 

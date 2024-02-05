@@ -206,7 +206,7 @@
   
 
   /* =============== */
-  form {
+  /* form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,4 +216,4 @@
 width: 500px;
 cursor: pointer;
 border-radius: 10px;
-  }
+  } */
