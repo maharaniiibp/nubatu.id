@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import "./navAddProgram.css";
+import "../../css/koinNusantara/navAddProgram.css";
 import { useLocation, Link } from "react-router-dom";
 import InformasiUmum from "./InformasiUmum"
 import FotoDetail from "./FotoDetail"

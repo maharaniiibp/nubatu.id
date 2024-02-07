@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar"
-import Home from "./pages/home"
 import Koin from "./pages/koin"
 import Nderek from "./pages/nderek"
 import Konten from "./pages/konten"

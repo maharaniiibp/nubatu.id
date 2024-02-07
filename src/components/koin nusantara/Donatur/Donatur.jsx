@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./donatur.css";
+import "../../css/koinNusantara/donatur.css";
 import data from "../../../data/donatur.json";
 
 const Donatur = ({ item }) => {

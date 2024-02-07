@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import dataTable from "../../../data/campaign.json";
-import "./campaignProgram.css";
+import "../../css/koinNusantara/campaignProgram.css";
 
 const Status = ({ status }) => {
     let button = null;

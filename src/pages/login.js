@@ -29,8 +29,8 @@ useEffect(() => {
     } else {
       alert("Anda harus login untuk mengakses halaman ini");
       window.location.href = "/";
-    }
-  }, []);
+  }
+}, []);
 
   return (
     <section className="vh-100">

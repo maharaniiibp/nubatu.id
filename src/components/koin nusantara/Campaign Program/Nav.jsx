@@ -1,21 +1,10 @@
 import React from 'react'
-import "./campaignProgram.css";
+import "../../css/koinNusantara/campaignProgram.css";
 import dataTable from "../../../data/campaign.json";
 
 const Nav = ({menuItems, filterItems, setItems}) => {
   return (
       <>
-          {/* {
-              menuItems.map(val => (
-                  <button onClick={() => filterItems(val)}>
-                      {val}
-                  </button>
-              ))
-          }
-           <button onClick={() => setItems(dataTable)}>
-                     All
-          </button> */}
-          
 
        <div className="navContainer">
             <div className="menu">
