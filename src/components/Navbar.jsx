@@ -139,7 +139,7 @@ const Navbar = () => {
                               <h5>Dana yang diajukan</h5>
                               <div className="inisiatorProf">
                 <img src="./sidebar/profil.svg" alt="" />
-                <p>Administrator</p>
+                <p>Administratorr</p>
               </div>
                             </Col>
                           </Row>
