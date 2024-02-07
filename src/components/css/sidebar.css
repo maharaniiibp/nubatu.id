@@ -57,7 +57,7 @@
         main {
             width: 100vw;
             heigth: 100vh;
-            background-color: beige;
+            background-color: #EDF6F0;
             overflow: hidden;
         }
     }
