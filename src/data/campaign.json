@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "photo": "./koinNusantara/foto1.svg",
+      "title": "Zakat Untuk Pendidikan Santri Pelosok",
+      "status": "disetujui",
+      "inisiator": "PCNU Batu",
+      "dana": "Rp100.000.000"
+    },
+    {
+      "id": 2,
+      "photo": "./koinNusantara/foto2.svg",
+      "title": "Hadirkan kebahagiaan melalui sedekah pangan",
+      "status": "Pengajuan",
+      "inisiator": "Indah Wahyuni",
+      "dana": "Rp10.000.000"
+    },
+    {
+      "id": 3,
+      "photo": "./koinNusantara/foto3.svg",
+      "title": "Pahala ABADI",
+      "status": "ditolak",
+      "inisiator": "Andi Aziz",
+      "dana": "Rp50.000.000"
+    }
+  ]

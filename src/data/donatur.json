@@ -1,0 +1,50 @@
+[
+    {
+       "id" : "1",
+       "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
+       "donatur" : "Ahmad Alamsyah Rauf",
+       "bank" : "./koinNusantara/bni.svg",
+       "noRek" : "0495285835",
+       "nominal" : "Rp750.000"
+    },
+    {
+        "id" : "2",
+        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
+        "donatur" : "Ahmad Alamsyah Rauf",
+        "bank" : "./koinNusantara/bca.svg",
+        "noRek" : "0495285835",
+        "nominal" : "Rp750.000"
+     },
+     {
+        "id" : "3",
+        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
+        "donatur" : "Ahmad Alamsyah Rauf",
+        "bank" : "./koinNusantara/bsi.svg",
+        "noRek" : "0495285835",
+        "nominal" : "Rp750.000"
+     },
+     {
+        "id" : "4",
+        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
+        "donatur" : "Ahmad Alamsyah Rauf",
+        "bank" : "bsi",
+        "noRek" : "0495285835",
+        "nominal" : "Rp750.000"
+     },
+     {
+        "id" : "5",
+        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
+        "donatur" : "Ahmad Alamsyah Rauf",
+        "bank" : "mandiri",
+        "noRek" : "0495285835",
+        "nominal" : "Rp750.000"
+     },
+     {
+        "id" : "6",
+        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
+        "donatur" : "Ahmad Alamsyah Rauf",
+        "bank" : "bk",
+        "noRek" : "0495285835",
+        "nominal" : "Rp750.000"
+     }
+]
