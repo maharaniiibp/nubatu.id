@@ -1,10 +1,32 @@
+
+.donatur {
 .donaturContainer {
   width: 100%;
   padding: 30px;
 
-  .table {
+  .table-wrapper {
     width: 100%;
-    padding: 0 20px;
+
+  .table {
+    /* padding: 0 20px;
+    border: 10px;
+    background: white; */
+    /* ============= */
+    /* display: block;
+    overflow: hidden;
+    table-layout: auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    white-space: nowrap;
+    width: 100em;
+    max-width: 80%;
+    margin: auto;
+    overflow-x: auto; */
+    .thead {
+        .no {
+            background: green;
+        }
+    }
 
     tbody {
 
@@ -33,11 +55,14 @@
       }
     }
 
-    tfoot {
+    /* tfoot {
       width: 100%;
       display: flex;
       background: white;
       justify-content: space-between;
-    }
+    } */
   }
 }
+}
+}
+
