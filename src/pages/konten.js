@@ -4,7 +4,7 @@ import React from 'react'
 const Konten = () => {
   return (
       <>
-    ini konten
+    ini konten page
       </>
   )
 }

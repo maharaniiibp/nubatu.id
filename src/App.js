@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import SidebarCobaLagi from "./components/sidebarCobaLagi"
+import Sidebar from "./components/Sidebar"
 import Home from "./pages/home"
 import Koin from "./pages/koin"
 import Nderek from "./pages/nderek"
@@ -10,12 +10,11 @@ import Pengaturan from "./pages/pengaturan"
 
 import Navbar from "./components/Navbar"
 import AddProgram from "./components/koin nusantara/Campaign Program/addProgram"
-// import NavAddProgram from "./components/koin nusantara/Campaign Program/addProgram"
 
 function App() {
   return (
     <div className="App">
-      <SidebarCobaLagi>
+      <Sidebar>
         <Navbar/>
          <Routes>
         <Route path="/" Component={Home} />
@@ -26,9 +25,8 @@ function App() {
         <Route path="/pengurus" Component={Pengurus} />
         <Route path="/pengaturan" Component={Pengaturan} />
         <Route path="/addProgram" Component={AddProgram} />
-        {/* <Route path="/navAddProgram" Component={NavAddProgram} /> */}
         </Routes>
-        </SidebarCobaLagi>
+        </Sidebar>
       </div>
   );
 }

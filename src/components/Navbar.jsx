@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import "./css/navbar.css";
 import { useLocation, Link } from "react-router-dom";
+import { Button, Modal, Col, Row } from "react-bootstrap";
 
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -42,6 +43,13 @@ const Navbar = () => {
   // Tentukan kondisi untuk menentukan apakah harus menampilkan isi Navbar atau tidak
   const isKoinNav = pathname == "/koin";
   const isAddProgramNav = pathname == "/addProgram";
+
+  // INI BUAT MODAL PENGAJUAN
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
       <div className="navbar">
@@ -75,22 +83,86 @@ const Navbar = () => {
             <>
               <div className="navKiri">
                 <div className="pageName">
-                  <img className="arrowLeft" src="./sidebar/arrow-left.svg" alt="" />
+                  <img
+                    className="arrowLeft"
+                    src="./sidebar/arrow-left.svg"
+                    alt=""
+                  />
                   <span>Kembali</span>
                 </div>
               </div>
 
               <div className="navKanan">
                 <Link to="">
-                  <button className="simpanPengajuan">
-                   Simpan Pengajuan
-                  </button>
+                  <button className="simpanPengajuan">Simpan Pengajuan</button>
                 </Link>
-                <Link to="">
-                  <button className="verifikasiProgram">
-                    Verifikasi Program
-                  </button>
-                </Link>
+                {/* <Link to=""> */}
+                <button className="verifikasiProgram" onClick={handleShow}>
+                  Verifikasi Program
+                </button>
+
+                <Modal
+                   show={show}
+                  size="lg"
+                  onHide={handleClose}
+                  backdrop="static"
+                  keyboard={false}
+                >
+                  <Modal.Header>
+                    <Modal.Title>Verifikasi Program</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Row className="modalContainer">
+                      <Col className="kiri">
+                        <h5>Sampul pratinjau</h5>
+                        <img className="fotoPratinjau" src="./koinNusantara/payung.svg" alt="" />
+                      </Col>
+                      <Col xs={7} className="kanan">
+                        <div className="isiKanan">
+                        <h5>Judul</h5>
+                          <p>Sedekah banjir dan jembatan putus untuk dampit</p>
+                          </div>
+                        <div className="isiKanan">
+                        <h5 className="deskripsi">Deskripsi</h5>
+                          <p>Program pengumpulan dana bantuan kesehatan dan makanan untuk korban bencana banjir bandang di dampit, kabupaten malang jawa timur.</p>
+                          </div>
+                        <div>
+                          <Row className="isiKanan">
+                            <Col>
+                              <h5>Dana yang diajukan</h5>
+                              <div className="dana">
+                                <div className="Rp"> <span>Rp</span> </div>
+                                <p>50.000.000</p>
+                                </div>
+                            </Col>
+                            <Col>
+                              <h5>Dana yang diajukan</h5>
+                              <div className="inisiatorProf">
+                <img src="./sidebar/profil.svg" alt="" />
+                <p>Administrator</p>
+              </div>
+                            </Col>
+                          </Row>
+                          </div>
+                        <div className="isiKanan">
+                        <h5>Persetujuan Program</h5>
+                          <p>ditolak diterima</p>
+                          </div>
+                        <div className="isiKanan">
+                          <p> <span className="fw-bold"> Pemberitahuan: </span> Anda wajib melakukan checklist pada persetujuan untuk mengubah status pengajuan program pada dashboard. Ingat!, persetujuan ini permanen dan tidak dapat diubah.</p>
+                          </div>
+                      </Col>
+              </Row>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+                    </Button>
+                    <Button variant="primary">Understood</Button>
+                  </Modal.Footer>
+                </Modal>
+    
+                {/* </Link> */}
               </div>
             </>
           )}

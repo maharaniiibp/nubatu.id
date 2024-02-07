@@ -51,18 +51,18 @@ const InformasiUmum = () => {
             </div>
                   </Col>
                   
-                  
+
           <Col className="kanan">
             <h3>Gambar sampul</h3>
                       <div className="top">
                           
               {files && (
                 <div className="uploads">
-                  <ul>
+                  {/* <ul>
                     {Array.from(files).map((file, idx) => (
                       <li key={idx}>{file.name}</li>
                     ))}
-                  </ul>
+                  </ul> */}
                   <div className="actions">
                     <button onClick={() => setFiles(null)}>Cancel</button>
                     <button onClick={handleUpload}>Upload</button>
@@ -109,7 +109,7 @@ const InformasiUmum = () => {
                   {Array.from(files).map((file, idx) => (
                     <div key={idx} className="imagePreview">
                       <img src={URL.createObjectURL(file)} alt={file.name} />
-                      <p>{file.name}</p>
+                      {/* <p>{file.name}</p> */}
                     </div>
                   ))}
                 </div>

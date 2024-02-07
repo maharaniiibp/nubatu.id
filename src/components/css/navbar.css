@@ -67,3 +67,125 @@ border: none;
     width: 24px;
   }
 }
+
+/* .fotoPratinjau {
+  height: 169px;
+  width: 100%;
+} */
+
+.modal-header {
+  border: none !important;
+}
+.modal-body {
+  border: none;
+}
+
+.modal-content {
+  padding: 40px;
+  /* width: 800px !important; */
+}
+
+.modal-body {
+/* background: lightblue; */
+padding: 0;
+margin: 0;
+/* gap: 20px; */
+.modalContainer {
+  gap: 30px;
+
+  .col {
+    /* background: blue; */
+  }
+}
+
+.kanan{
+  /* background: lightgreen; */
+  margin: 0;
+  padding: 0;
+
+  .isiKanan {
+    margin-bottom: 30px;
+
+.dana {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+    .Rp {
+      width: 32px;
+      height: 32px;
+      background: #009B4C;
+      border-radius: 5px;
+      padding: 8px;
+
+      span {
+        margin: 0;
+        padding: 0;
+        color: white;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        font-weight: semi-bold;
+        line-height: 16px;
+        letter-spacing: -0.24px;
+      }
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+    }
+
+    
+    .inisiatorProf {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      img {
+        width: 40px;
+        border-radius: 50px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.24px;
+        color: #808080;
+        font-weight: semi-bold;
+        margin: 0;
+      }
+    }
+  }
+}
+.kiri{
+  /* background: green; */
+  margin: 0;
+  padding: 0;
+}
+
+  .fotoPratinjau {
+    width: 260px;
+    border-radius: 10px;
+  }
+  
+  h5 {
+    font-size: 16px;
+    letter-spacing: -0.24px;
+    color: black;
+    font-weight: semi-bold;
+  }
+  p {
+    font-size: 16px;
+    letter-spacing: -0.24px;
+    color: #808080;
+  }
+
+  .deskripsi {
+    font-size: 14px;
+    letter-spacing: -0.24px;
+    color: black;
+  }
+}
