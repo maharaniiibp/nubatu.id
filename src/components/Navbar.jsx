@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./css/navbar.css";
 import { useLocation, Link } from "react-router-dom";
 import { Button, Modal, Col, Row } from "react-bootstrap";
@@ -102,7 +102,7 @@ const Navbar = () => {
                 </button>
 
                 <Modal
-                   show={show}
+                  show={show}
                   size="lg"
                   onHide={handleClose}
                   backdrop="static"
@@ -115,53 +115,87 @@ const Navbar = () => {
                     <Row className="modalContainer">
                       <Col className="kiri">
                         <h5>Sampul pratinjau</h5>
-                        <img className="fotoPratinjau" src="./koinNusantara/payung.svg" alt="" />
+                        <img
+                          className="fotoPratinjau"
+                          src="./koinNusantara/payung.svg"
+                          alt=""
+                        />
                       </Col>
                       <Col xs={7} className="kanan">
                         <div className="isiKanan">
-                        <h5>Judul</h5>
+                          <h5>Judul</h5>
                           <p>Sedekah banjir dan jembatan putus untuk dampit</p>
-                          </div>
+                        </div>
                         <div className="isiKanan">
-                        <h5 className="deskripsi">Deskripsi</h5>
-                          <p>Program pengumpulan dana bantuan kesehatan dan makanan untuk korban bencana banjir bandang di dampit, kabupaten malang jawa timur.</p>
-                          </div>
+                          <h5 className="deskripsi">Deskripsi</h5>
+                          <p>
+                            Program pengumpulan dana bantuan kesehatan dan
+                            makanan untuk korban bencana banjir bandang di
+                            dampit, kabupaten malang jawa timur.
+                          </p>
+                        </div>
                         <div>
                           <Row className="isiKanan">
                             <Col>
                               <h5>Dana yang diajukan</h5>
                               <div className="dana">
-                                <div className="Rp"> <span>Rp</span> </div>
-                                <p>50.000.000</p>
+                                <div className="Rp">
+                                  {" "}
+                                  <span>Rp</span>{" "}
                                 </div>
+                                <p>50.000.000</p>
+                              </div>
                             </Col>
                             <Col>
                               <h5>Dana yang diajukan</h5>
                               <div className="inisiatorProf">
-                <img src="./sidebar/profil.svg" alt="" />
-                <p>Administratorr</p>
-              </div>
+                                <img src="./sidebar/profil.svg" alt="" />
+                                <p>Administratorr</p>
+                              </div>
                             </Col>
                           </Row>
-                          </div>
+                        </div>
                         <div className="isiKanan">
-                        <h5>Persetujuan Program</h5>
-                          <p>ditolak diterima</p>
+                          <h5>Persetujuan Program</h5>
+                          <div className="checkboxContainer">
+                            <div className="checkbox">
+                              <input type="checkbox" className="" />
+                              <label>Diterima</label>
+                            </div>
+                            <div className="checkbox">
+                              <input type="checkbox" className="checkbox" />
+                              <label>Ditolak</label>
+                            </div>
+                            {/* <img src="./koinNusantara/checklist.svg" alt="" className="checked"/> */}
                           </div>
-                        <div className="isiKanan">
-                          <p> <span className="fw-bold"> Pemberitahuan: </span> Anda wajib melakukan checklist pada persetujuan untuk mengubah status pengajuan program pada dashboard. Ingat!, persetujuan ini permanen dan tidak dapat diubah.</p>
-                          </div>
+                        </div>
+                        <div className="isiKanan pemberitahuanContainer">
+                          <p>
+                            {" "}
+                            <span className="pemberitahuan fw-bold ">
+                              {" "}
+                              Pemberitahuan:{" "}
+                            </span>{" "}
+                            Anda wajib melakukan checklist pada persetujuan
+                            untuk mengubah status pengajuan program pada
+                            dashboard. Ingat!, persetujuan ini permanen dan
+                            tidak dapat diubah.
+                          </p>
+                        </div>
+
+                        {/* button  */}
+                        <div className="buttonContainer">
+                          <button className="back" onClick={handleClose}>
+                            <img src="./koinNusantara/back.svg" alt="" />
+                           Kembali 
+                          </button>
+                          <button className="setuju" onClick={handleClose}>Saya setuju</button>
+                        </div>
                       </Col>
-              </Row>
+                    </Row>
                   </Modal.Body>
-                  <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                      Close
-                    </Button>
-                    <Button variant="primary">Understood</Button>
-                  </Modal.Footer>
                 </Modal>
-    
+
                 {/* </Link> */}
               </div>
             </>

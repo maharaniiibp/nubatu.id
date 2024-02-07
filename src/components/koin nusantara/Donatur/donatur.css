@@ -1,0 +1,43 @@
+.donaturContainer {
+  width: 100%;
+  padding: 30px;
+
+  .table {
+    width: 100%;
+    padding: 0 20px;
+
+    tbody {
+
+      .bankContainer {
+        padding: 10px;
+        width: 28px;
+        height: 28px;
+        background: #f4f4f4;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+
+        .iconContainer {
+            min-width: 24px;
+            max-width: 24px;
+            max-height: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+      }
+    }
+
+    tfoot {
+      width: 100%;
+      display: flex;
+      background: white;
+      justify-content: space-between;
+    }
+  }
+}

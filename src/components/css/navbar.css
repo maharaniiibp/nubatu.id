@@ -189,3 +189,82 @@ margin: 0;
     color: black;
   }
 }
+
+.checkboxContainer {
+  display: flex;
+  gap: 36px;
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    /* input[type="checkbox"]{
+      appearance: none;
+      -webkit-appearance: none;
+      border: 1px solid #D0D5DD !important;
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      justify-content: center;
+
+      &:after {
+        content: url('/koinNusantara/checklist.svg');
+        content: "\f00c";
+        background-image: url("/koinNusantara/checklist.svg");
+        font-weight: 900;
+        font-size: 50px;
+        color: green;
+        display: inline-block;
+      }
+    } */
+
+  }
+}
+.pemberitahuanContainer {
+  margin-bottom: 50px;
+}
+
+.pemberitahuan {
+  color: black;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+
+  .back{
+    padding: 15px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: black;
+    /* background-color: transparent; */
+    background-color: transparent;
+    font-size: 14px;
+    gap: 8px;
+    border-radius: 10px;
+    border: 1px solid #BFBFBF;
+
+    &:hover {
+      font-weight: bold;
+      border: 1px solid black;
+    }
+}
+
+.setuju {
+  padding: 15px;
+  margin: 0;
+  border: none;
+  border-radius: 10px;
+    background: #078D41;
+    color: white;
+    font-size: 14px;
+    font-weight: semi-bold;
+
+    &:hover {
+      background: lightgreen;
+    }
+}
+}
