@@ -1,26 +1,25 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 // import InformasiUmum from "./InformasiUmum"
 // import FotoDetail from "./FotoDetail"
 
-
 const KontenNav = () => {
-    const [activeTab, setActiveTab] = useState("InformasiUmum"); // Default tab
+  // const [activeTab, setActiveTab] = useState("InformasiUmum");
 
-    const renderTabContent = () => {
-        switch (activeTab) {
-            case "InformasiUmum":
-                return
-                <InformasiUmum />;
-            case "FotoDetail":
-                return <FotoDetail />;
-            default:
-                return <InformasiUmum />;
-        }
-    }
+  // const renderTabContent = () => {
+  //     switch (activeTab) {
+  //         case "InformasiUmum":
+  //             return
+  //             <InformasiUmum />;
+  //         case "FotoDetail":
+  //             return <FotoDetail />;
+  //         default:
+  //             return <InformasiUmum />;
+  //     }
+  // }
   return (
-      <>
-      <div className="navContainer">
+    <>
+      {/* <div className="navContainer">
         <div className="menu">
           <nav class="nav">
           <a
@@ -41,9 +40,9 @@ const KontenNav = () => {
 
           <div className="programKonten">
           {renderTabContent()}
-          </div>
-          </>
-  )
-}
+          </div> */}
+    </>
+  );
+};
 
-export default KontenNav
+export default KontenNav;

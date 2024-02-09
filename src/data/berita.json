@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "photo": "./konten/berita1.svg",
+        "title": "Kick Off Resepsi 1 Abad, PCNU Kota Batu Siapkan Beragam ...",
+        "status": "draft",
+        "jurnalis": "W. Nadia",
+        "tanggal": "Okt 05, 2023"
+    },
+    {
+        "id": 2,
+        "photo": "./konten/berita2.svg",
+        "title": "Kick Off Resepsi 1 Abad, PCNU Kota Batu Siapkan Beragam ...",
+        "status": "publish",
+        "jurnalis": "AH Baharuddin",
+        "tanggal": "Sep 13, 2023"
+    }
+]

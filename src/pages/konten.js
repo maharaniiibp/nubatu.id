@@ -1,5 +1,5 @@
 import React from 'react'
-import Berita from "../components/Konten/Konten-Nav"
+import Berita from "../components/Konten/Berita/Berita"
 
 
 const Konten = () => {

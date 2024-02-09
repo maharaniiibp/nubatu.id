@@ -21,16 +21,16 @@ const Login = () => {
     }
   };
   
-  const [ setToken] = useState("");
-useEffect(() => {
-    const storedToken = localStorage.getItem("token");
-    if (storedToken) {
-      setToken(storedToken);
-    } else {
-      alert("Anda harus login untuk mengakses halaman ini");
-      window.location.href = "/";
-  }
-}, []);
+//   const [ setToken] = useState("");
+// useEffect(() => {
+//     const storedToken = localStorage.getItem("token");
+//     if (storedToken) {
+//       setToken(storedToken);
+//     } else {
+//       alert("Anda harus login untuk mengakses halaman ini");
+//       window.location.href = "/";
+//   }
+// }, []);
 
   return (
     <section className="vh-100">
