@@ -12,13 +12,13 @@ const Navbar = () => {
 
   let pageName = "";
   switch (pathname) {
-    case "/":
+    case "/beranda":
       pageName = "Beranda";
       break;
     case "/koin":
       pageName = "Program";
       break;
-    case "/nderek":
+    case "/nderektanglet":
       pageName = "Nderek tanglet";
       break;
     case "/konten":

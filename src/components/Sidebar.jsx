@@ -8,7 +8,7 @@ function SidebarCobaLagi({ children }) {
   const toggle = () => setIsOpen(!isOpen);
   const menuItem = [
     {
-      path: "/",
+      path: "/beranda",
       name: "beranda",
       icon: <img src="./sidebar/home.svg" alt="icon" />
     },
@@ -18,7 +18,7 @@ function SidebarCobaLagi({ children }) {
       icon: <img src="./sidebar/coin.svg" alt="icon" />
     },
     {
-      path: "/nderek",
+      path: "/nderektanglet",
       name: "nderek tanglet",
       icon: <img src="./sidebar/message-notif.svg" alt="icon" />
     },
