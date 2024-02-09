@@ -1,10 +1,13 @@
 import React from 'react'
+import Berita from "../components/Konten/Konten-Nav"
 
 
 const Konten = () => {
   return (
       <>
-    ini konten page
+      <div className="konten">
+        <Berita />
+  </div>
       </>
   )
 }
