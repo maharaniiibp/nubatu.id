@@ -1,7 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar"
+// <<<<<<< yasmin
+// =======
+// import Home from "./pages/home"
+// >>>>>>> main
 import Koin from "./pages/koin"
-import Nderek from "./pages/nderek"
+// import Nderek from "./pages/nderek"
 import Konten from "./pages/konten"
 import Anggota from "./pages/anggota"
 import Pengurus from "./pages/pengurus"
@@ -26,16 +30,15 @@ function App() {
         <Navbar/>
         <Routes>
         <Route path="/" Component={Login} />
+        <Route path="/beranda" Component={Beranda} />
         <Route path="/koin" Component={Koin} />
-        <Route path="/nderek" Component={Nderek} />
+        <Route path="/nderektanglet" Component={Nderektanglet} />
         <Route path="/konten" Component={Konten} />
         <Route path="/anggota" Component={Anggota} />
         <Route path="/pengurus" Component={Pengurus} />
         <Route path="/pengaturan" Component={Pengaturan} />
         <Route path="/addProgram" Component={AddProgram} />
         <Route path="/donatur" Component={Donatur} />
-        <Route path="/beranda" Component={Beranda} />
-        <Route path="/nderektanglet" Component={Nderektanglet} />
         </Routes>
         </Sidebar>
       </div>
