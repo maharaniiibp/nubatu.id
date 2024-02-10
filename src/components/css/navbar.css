@@ -34,6 +34,14 @@
     border-radius: 50px;
     border: 3px solid #009B4C;
   }
+
+  .navKiri {
+    .kembali {
+      border: none;
+      background: transparent;
+      
+    }
+  }
   }
 }
 
@@ -270,3 +278,4 @@ margin: 0;
     }
 }
 }
+

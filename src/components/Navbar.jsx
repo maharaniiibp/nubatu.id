@@ -45,8 +45,10 @@ const Navbar = () => {
   const isButtonVisible = pathname === "/koin";
   // Tentukan kondisi untuk menentukan apakah harus menampilkan isi Navbar atau tidak
   const isKoinNav = pathname == "/koin";
-  const isAddProgramNav = pathname == "/addProgram";
+  const isKontenNav = pathname == "/konten";
   const isDonatur = pathname == "/donatur";
+  const isAddProgramNav = pathname == "/addProgram";
+  const isAddBeritaNav = pathname == "/addBerita";
 
   // INI BUAT MODAL PENGAJUAN
   const [show, setShow] = useState(false);
@@ -92,7 +94,9 @@ const Navbar = () => {
                     src="./sidebar/arrow-left.svg"
                     alt=""
                   />
-                  <span>Kembali</span>
+                  <Link to="./koin">
+                  <button className="kembali">Kembali</button>
+                </Link>
                 </div>
               </div>
 
@@ -221,6 +225,62 @@ const Navbar = () => {
               </div>
             </>
           )}
+          
+          {/* Nav nya Berita */}
+          {isKontenNav && (
+            <>
+              <div className="navKiri">
+                <div className="pageName">
+                  <p>{pageName}</p>
+                </div>
+              </div>
+
+              <div className="navKanan">
+                <Link to="/addBerita">
+                  <button className="addProgram">
+                    Tambah Berita
+                    <img src="./koinNusantara/plus.svg" alt="" />
+                  </button>
+                </Link>
+
+                <div className="account">
+                  <img src="./sidebar/profil.svg" alt="Me" className="photo" />
+                </div>
+              </div>
+            </>
+          )}
+
+                    {/* Nav nya ADD PROGRAM  */}
+                    {isAddBeritaNav && (
+            <>
+              <div className="navKiri">
+                <div className="pageName">
+                  <img
+                    className="arrowLeft"
+                    src="./sidebar/arrow-left.svg"
+                    alt=""
+                  />
+                  <Link to="./konten">
+                  <button className="kembali">Kembali</button>
+                </Link>
+                </div>
+              </div>
+
+              <div className="navKanan">
+                <Link to="">
+                  <button className="simpanPengajuan">Simpan sebagai draft</button>
+                </Link>
+                {/* <Link to=""> */}
+                <button className="verifikasiProgram" onClick={handleShow}>
+                  Publish sekarang
+                </button>
+
+                {/* </Link> */}
+              </div>
+            </>
+          )}
+
+
         </div>
       </div>
     </>

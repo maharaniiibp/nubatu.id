@@ -15,6 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./components/Navbar"
 import AddProgram from "./components/koin nusantara/Campaign Program/addProgram"
 import Donatur from "./components/koin nusantara/Donatur/Donatur"
+import AddBerita from "./components/Konten/Berita/addBerita"
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/pengaturan" Component={Pengaturan} />
         <Route path="/addProgram" Component={AddProgram} />
         <Route path="/donatur" Component={Donatur} />
+        <Route path="/addBerita" Component={AddBerita} />
         <Route path="/beranda" Component={Beranda} />
         <Route path="/nderektanglet" Component={Nderektanglet} />
         </Routes>
