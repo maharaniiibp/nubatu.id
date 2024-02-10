@@ -1,0 +1,267 @@
+.donatur {
+  .donaturContainer {
+    width: 100%;
+    padding: 30px;
+
+    .table-wrapper {
+      width: 100%;
+
+      .filterContainer {
+        padding: 16px 20px;
+        background: white;
+        justify-content: end;
+        display: flex;
+        border-radius: 20px 20px 0 0;
+
+        button {
+          padding: 10px 16px;
+          display: flex;
+          gap: 10px;
+          border-radius: 10px;
+          border: 1px solid #009b4c;
+          background-color: transparent;
+          font-size: 14px;
+          font-weight: semi-bold;
+          color: black;
+          line-height: 29px;
+          align-items: center;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      table {
+        margin: 0;
+
+        th {
+          padding: 12px 20px;
+        }
+
+        tbody {
+          td {
+            padding: 12px 20px;
+          }
+
+          .bankContainer {
+            padding: 10px;
+            width: 28px;
+            height: 28px;
+            background: #f4f4f4;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+
+            .iconContainer {
+              min-width: 24px;
+              max-width: 24px;
+              max-height: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+
+          .lihat {
+            display: flex;
+            gap: 5px;
+
+            span {
+              font-size: 14px;
+              line-height: 28px;
+              letter-spacing: -0.24px;
+              color: #5e6f80;
+            }
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+      .paginationContainer {
+        padding: 16px 20px;
+        background: white;
+        display: flex;
+        border-radius: 0 0 20px 20px;
+        justify-content: space-between;
+        align-items: center;
+
+        .buttons {
+          display: flex;
+          gap: 12px;
+
+          button {
+            background-color: transparent;
+            border: 1px solid #d0d5dd;
+            padding: 8px;
+            border-radius: 8px;
+            color: #344054;
+            font-size: 14px;
+            line-height: 20px;
+            paragraph-spacing: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* CSS MODAL  */
+.modal {
+  .modal-dialog {
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+  
+  .modal-content {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: transparent;
+  }
+  .modal-header {
+    padding: 0;
+    margin-bottom: 40px;
+
+    .modal-title {
+      padding: 0;
+      font-size: 32px;
+      line-height: 28px;
+      letter-spacing: -0.24px;
+      color: black;
+      font-weight: semi-bold;
+    }
+  }
+
+  .modal-body {
+
+    .detailContainer {
+
+    .content {
+      border: 1px solid #BFBFBF;
+      border-radius: 0 0 10px 10px;
+    padding: 30px 20px;
+
+    }
+      .topDetail {
+        height: 60px;
+        width: 100%;
+        background: #009b4c;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .detailAtas {
+        text-align: center;
+        padding-bottom: 30px;
+        border-bottom: 1px dashed #BFBFBF;
+
+        .title {
+          font-size: 24px;
+          font-weight: semi-bold;
+          line-height: 28px;
+          letter-spacing: -0.24px;
+          color: black;
+          margin-bottom: 8px;
+        }
+
+        .date {
+          font-size: 16px;
+          letter-spacing: -0.24px;
+          color: #808080;
+          margin-bottom: 30px;
+        }
+
+        .price {
+          font-size: 36px;
+          font-weight: bold;
+          line-height: 28px;
+          letter-spacing: -0.24px;
+          color: black;
+          margin-bottom: 30px;
+        }
+      }
+
+      .detailTengah {
+        padding: 30px 0;
+        border-bottom: 1px dashed #BFBFBF;
+
+        .tengahBaris {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .kiri {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: -0.24px;
+            color: #808080;
+          }
+
+          .kanan {
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: -0.24px;
+            color: black;
+            font-weight: semi-bold;
+          }
+        }
+      }
+
+      .detailBawah {
+        padding-top: 30px;
+
+        .bawahBaris {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .kiri {
+            font-size: 16px;
+            line-heigh: 28px;
+            letter-spacing: -0.24px;
+            color: #808080;
+          }
+
+          .kanan {
+            font-size: 14px;
+            line-height: 28px;
+            letter-spacing: -0.24px;
+            color: black;
+            font-weight: semi-bold;
+          }
+        }
+      }
+    }
+
+    .buttonLine {
+      display: blok;
+
+    .back{
+      padding: 15px;
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      color: black;
+      /* background-color: transparent; */
+      background-color: transparent;
+      font-size: 14px;
+      gap: 8px;
+      border-radius: 10px;
+      border: 1px solid #BFBFBF;
+  
+      &:hover {
+        font-weight: bold;
+        border: 1px solid black;
+      }
+  }
+  }
+}
+}
+}

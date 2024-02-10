@@ -1,6 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar"
+// <<<<<<< yasmin
+// =======
 // import Home from "./pages/home"
+// >>>>>>> main
 import Koin from "./pages/koin"
 // import Nderek from "./pages/nderek"
 import Konten from "./pages/konten"

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useTable, usePagination } from "react-table";
-import "./campaignProgram.css";
 import DataTable from "react-data-table-component";
 import dataTable from "../../../data/campaign.json";
 import Status from "./Status";
 import DataNama from "./DataNama";
 import { Search } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import "../../css/koinNusantara/campaignProgram.css";
 
 const CampaignProgram = ({ data }) => {
   const [jsonData, setJsonData] = useState([]);

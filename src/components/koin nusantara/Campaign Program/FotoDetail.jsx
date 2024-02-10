@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "./fotoDetail.css"
+import "../../css/koinNusantara/fotoDetail.css"
 import { Row, Col } from "react-bootstrap";
 
 const FotoDetail = () => {

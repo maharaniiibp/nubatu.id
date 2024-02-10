@@ -23,7 +23,9 @@
 
     .pageName p {
       font-size: 36px;
-      font-weight: semi-bold;
+      font-weight: bold;
+      text-transform: capitalize;
+      margin: 0;
     }
 
   .photo {

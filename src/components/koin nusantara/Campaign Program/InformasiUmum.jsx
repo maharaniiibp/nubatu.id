@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../../css/addProgram.css";
+import "../../css/koinNusantara/addProgram.css";
 import { Row, Col } from "react-bootstrap";
 
 const InformasiUmum = () => {

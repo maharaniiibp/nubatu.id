@@ -1,0 +1,262 @@
+.berita {
+  padding: 0 40px;
+  background-color: #edf6f0;
+
+  .beritaContainer {
+    width: 100%;
+    flex: 6;
+
+    table {
+      margin: 0;
+
+      thead {
+        th {
+          padding: 18px 20px 14px 20px;
+          font-size: 12px;
+          line-height: 28px;
+          letter-spacing: -0.28px;
+          color: #404040;
+        }
+
+        .thTgl {
+          display: flex;
+          align-items: flex-start; /* Untuk menyusun elemen di bagian atas */
+          justify-content: flex-end; /* Untuk menyusun elemen di kanan */
+        }
+      }
+      tbody {
+        td {
+          padding: 20px 20px;
+        }
+
+        .tgl {
+          font-size: 14px;
+          line-height: 28px;
+          letter-spacing: -0.24px;
+          color: #252c32;
+        }
+
+        .jurnalis {
+          font-size: 12px;
+          line-height: 28px;
+          letter-spacing: -0.24px;
+          color: black;
+        }
+      }
+
+      .data {
+        text-transform: capitalize;
+      }
+      .dataNamaContainer {
+        display: flex;
+        gap: 20px;
+
+        .fotoNama {
+          border-radius: 10px;
+          width: 100px;
+        }
+
+        .description {
+          .title {
+            margin-bottom: 4px;
+            font-weight: bold;
+            font-size: 12px;
+          }
+
+          .akses {
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+
+            .action {
+              .actionIcon {
+                margin-right: 4px;
+              }
+
+              span {
+                font-size: 12px;
+                color: #808080;
+              }
+
+              &:hover {
+                span {
+                  color: red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .paginationContainer {
+      padding: 16px 20px;
+      background: white;
+      display: flex;
+      border-radius: 0 0 20px 20px;
+      justify-content: space-between;
+      align-items: center;
+
+      .buttons {
+        display: flex;
+        gap: 12px;
+
+        button {
+          background-color: transparent;
+          border: 1px solid #d0d5dd;
+          padding: 8px;
+          border-radius: 8px;
+          color: #344054;
+          font-size: 14px;
+          line-height: 20px;
+          paragraph-spacing: 14px;
+        }
+      }
+
+      .pageOf {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .page {
+          font-size: 14px;
+          line-height: 20px;
+          paragraph-spacing: 14px;
+          color: #344054;
+        }
+
+        .pagination-options {
+          font-size: 12px;
+
+          select {
+            border: none;
+            color: gray;
+        border: none;
+        font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.statusColor {
+  .draft {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    padding-right: 8px;
+    padding-left: 6px;
+    border-radius: 4px;
+    background-color: #ecfdf3;
+    color: #027a48;
+    font-size: 12px;
+    text-transform: capitalize;
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background-color: #12b76a;
+      border-radius: 5px;
+    }
+  }
+  .publish {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    padding-right: 8px;
+    padding-left: 6px;
+    border-radius: 4px;
+    background-color: #fffaeb;
+    color: #b86e00;
+    font-size: 12px;
+    text-transform: capitalize;
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      background-color: #eb8d00;
+      border-radius: 5px;
+    }
+  }
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu {
+    display: flex;
+    gap: 20px;
+
+    button {
+      padding: 10px 12px;
+      border: none;
+      border-radius: 10px;
+      color: #404040;
+      line-height: 20px;
+      font-size: 14px;
+      background-color: transparent;
+
+      &:hover {
+        color: black;
+        font-weight: bold;
+        border: 1px solid #009b4c;
+        transition: all 0.3s;
+      }
+
+      &:focus {
+        color: black;
+        font-weight: bold;
+        border: 1px solid #009b4c;
+        transition: all 0.3s;
+      }
+    }
+  }
+
+  .search {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #009b4c;
+    color: black;
+    font-weight: bold;
+    line-height: 20px;
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .searchInput {
+    padding: 12px 16px;
+    border: 1px solid #009b4c;
+    border-radius: 10px;
+
+    .input {
+      background-color: transparent;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+/* .navbar {
+  .addProgram {
+    padding: 15px;
+    background-color: #078D41;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: semi-bold;
+  }
+  } */

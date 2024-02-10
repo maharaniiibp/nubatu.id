@@ -16,7 +16,10 @@ const Navbar = () => {
       pageName = "Beranda";
       break;
     case "/koin":
-      pageName = "Program";
+      pageName = "Koin";
+      break;
+    case "/donatur":
+      pageName = "donatur";
       break;
     case "/nderektanglet":
       pageName = "Nderek tanglet";
@@ -43,6 +46,7 @@ const Navbar = () => {
   // Tentukan kondisi untuk menentukan apakah harus menampilkan isi Navbar atau tidak
   const isKoinNav = pathname == "/koin";
   const isAddProgramNav = pathname == "/addProgram";
+  const isDonatur = pathname == "/donatur";
 
   // INI BUAT MODAL PENGAJUAN
   const [show, setShow] = useState(false);
@@ -197,6 +201,23 @@ const Navbar = () => {
                 </Modal>
 
                 {/* </Link> */}
+              </div>
+            </>
+          )}
+
+          {/* Nav nya DONATUR  */}
+          {isDonatur && (
+            <>
+              <div className="navKiri">
+                <div className="pageName">
+                  <p>{pageName}</p>
+                </div>
+              </div>
+
+              <div className="navKanan">
+                <div className="account">
+                  <img src="./sidebar/profil.svg" alt="Me" className="photo" />
+                </div>
               </div>
             </>
           )}
