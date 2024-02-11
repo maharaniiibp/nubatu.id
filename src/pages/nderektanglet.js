@@ -20,38 +20,40 @@ const NderekTanglet = () => {
         `}
       </style>
 
-      <section className="satu">
-        <div className="d-flex mb-3 p-4">
-          <div
-            style={{
-              color: "black",
-              fontSize: 36,
-              fontFamily: "Inter, sans-serif",
-              fontWeight: "600",
-              wordWrap: "break-word",
-            }}
-          >
-            Nderek Tanglet
-          </div>
-          <div className="ms-auto">
-            <img
-              style={{
-                width: 56,
-                height: 56,
-                borderRadius: 50,
-                border: "3px #009B4C solid",
-              }}
-              src="../assets/tanglet.svg"
-              alt="Tanglet Logo"
-            />
-          </div>
-        </div>
-      </section>
+      <section className="satu mx-5">
+  <div className="d-flex mb-3  ">
+    <div
+      style={{
+        color: "black",
+        fontSize: 36,
+        fontFamily: "Inter, sans-serif",
+        fontWeight: "600",
+        wordWrap: "break-word",
+      }}
+    >
+      Nderek Tanglet
+    </div>
+    <div className="ms-auto" style={{ alignSelf: "flex-start" }}>
+      <img
+        style={{
+          width: 56,
+          height: 56,
+          borderRadius: 50,
+          border: "3px #009B4C solid",
+          // marginRight:"50px"
+        }}
+        src="../assets/tanglet.svg"
+        alt="Tanglet Logo"
+      />
+    </div>
+  </div>
+</section>
+
 
       <section className="dua">
-        <div className="d-flex mb-5" style={{ marginLeft: "20px" }}>
+        <div className="d-flex mb-5 py-2" style={{ marginLeft: "20px" }}>
           <div
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", fontSize: "12px"}}
             className={`px-4 ${
               activeTab === "inbox"
                 ? "border border-success rounded p-2 fw-bold"
@@ -62,7 +64,7 @@ const NderekTanglet = () => {
             Kotak Masuk
           </div>
           <div
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", fontSize: "12px" }}
             className={`px-4 ${
               activeTab === "tunda"
                 ? "border border-success rounded p-2 fw-bold"
@@ -73,7 +75,7 @@ const NderekTanglet = () => {
             Tunda
           </div>
           <div
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", fontSize: "12px" }}
             className={`px-4 ${
               activeTab === "dibales"
                 ? "border border-success rounded p-2 fw-bold"
@@ -84,7 +86,7 @@ const NderekTanglet = () => {
             Dibales
           </div>
           <div
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", fontSize: "12px" }}
             className={`px-4 ${
               activeTab === "arsip"
                 ? "border border-success rounded p-2 fw-bold"
@@ -95,8 +97,8 @@ const NderekTanglet = () => {
             Arsip
           </div>
           <div
-            style={{ cursor: "pointer", marginLeft: "55%" }}
-            className="border border-success rounded p-2 px-8 d-flex align-items-center"
+            style={{ cursor: "pointer", fontSize: "12px" }}
+            className="ms-auto mx-5 border border-success rounded p-2  d-flex align-items-center"
           >
             <span className="mr-2 me-2 fw-bold">Pencarian</span>
             <img

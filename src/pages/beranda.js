@@ -42,12 +42,12 @@ const Beranda = () => {
               program kerja.
             </div>
             <div className="mb-4"></div>
-            <Link to="/path-halaman" style={{ textDecoration: "none" }}>
-              <button style={{ backgroundColor: "#198754" }} className="d-flex">
+            <Link to="/koin" style={{ textDecoration: "none" }}>
+              <button style={{ backgroundColor: "#198754" }} className="d-flex border border-0 rounded-2 p-2">
                 <div className="flex-shrink-0">
                   <img src="./assets/coin.svg" alt="..." />
                 </div>
-                <div className="flex-grow-1 ms-2 mt-2 fs-5 fw-medium text-white">
+                <div className="flex-grow-1 ms-2 mt-2 fs-6 fw-normal text-white">
                   Koin NUsantara
                 </div>
               </button>

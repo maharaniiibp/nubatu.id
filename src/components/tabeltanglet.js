@@ -44,7 +44,7 @@ const TabelTanglet = () => {
   };
 
   return (
-    <div className="px-4 ">
+    <div className=" mx-5">
       <table className="bg-white" style={{ borderRadius: "15px" }}>
         <thead className="table border-bottom">
           {/* header tabel */}
@@ -63,7 +63,7 @@ const TabelTanglet = () => {
                 style={{ cursor: "pointer" }}
               />
               <img
-                className="mb-1 mx-2"
+                className="mb-1   "
                 src="../assets/refresh.svg"
                 alt="Refresh"
                 onClick={handleRefreshClick}
