@@ -40,7 +40,7 @@ function SidebarCobaLagi({ children }) {
       ],
     },
     {
-      path: "/nderek",
+      path: "/nderektanglet",
       name: "nderek tanglet",
       icon: <img src="./sidebar/message-notif.svg" alt="icon" />,
     },
