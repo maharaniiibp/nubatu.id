@@ -49,6 +49,7 @@ const Navbar = () => {
   const isDonatur = pathname == "/donatur";
   const isAddProgramNav = pathname == "/addProgram";
   const isAddBeritaNav = pathname == "/addBerita";
+  const isBerandaNav = pathname == "/beranda";
 
   // INI BUAT MODAL PENGAJUAN
   const [show, setShow] = useState(false);
@@ -56,6 +57,10 @@ const Navbar = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  if (isBerandaNav) {
+    return null; // Mengembalikan null untuk tidak merender apapun jika beranda
+  }
+  
   return (
     <>
       <div className="navbar">
@@ -255,11 +260,12 @@ const Navbar = () => {
             <>
               <div className="navKiri">
                 <div className="pageName">
+                  <div>
                   <img
                     className="arrowLeft"
                     src="./sidebar/arrow-left.svg"
                     alt=""
-                  />
+                  /></div>
                   <Link to="./konten">
                   <button className="kembali">Kembali</button>
                 </Link>
@@ -280,6 +286,7 @@ const Navbar = () => {
             </>
           )}
 
+            
 
         </div>
       </div>

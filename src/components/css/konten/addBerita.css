@@ -1,0 +1,653 @@
+/* SMALL */
+@media (max-width: 425px) {
+    .addBeritaContainer {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+    
+        h5 {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+    
+        .title {
+            border: none;
+            background: transparent;
+            font-size: 24px;
+            line-height: 48px;
+            letter-spacing: -0.24px;
+            margin-bottom: 20px;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        .dragDrop {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+    
+            .dropzone {
+                width: 100%;
+                border-radius: 10px;
+                border: 2px dashed #808080;
+                background-color: #f6fff9;
+                justify-content: center;
+                display: flex;
+                padding: 80px 60px;
+    
+                .isi {
+                    width: 400px;
+    
+                    .imgContainer {
+                        display: flex;
+                        justify-content: center;
+            
+                        img {
+                          display: block;
+                          width: 40px;
+                          text-align: center;
+                          margin-bottom: 16px;
+                        }
+                      }
+            
+                      h1 {
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: black;
+                        line-height: 25px;
+                        letter-spacing: -0.24px;
+                        margin-bottom: 8px;
+            
+                        span {
+                          color: #0047ff;
+                          cursor: pointer;
+                        }
+                      }
+            
+                      p {
+                        display: block;
+                        text-align: center;
+                        font-size: 12px;
+                        line-height: 18px;
+                        letter-spacing: -0.24px;
+                        color: #808080;
+                      }
+    
+                      ul {
+                        display: flex;
+                        justify-content: start;
+                        padding: 0;
+                        /* gap: 8px; */
+    
+                        li {
+                           color: #808080;
+                           font-size: 12px;
+                           line-height: 18px;
+                        letter-spacing: -0.24px;
+                        }
+    
+                        .listGanjil {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+      
+                
+              }
+    
+        }
+    
+        .tglJurnalis {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+    
+            .col {
+                label {
+                    display: block;
+                    font-size: 14px;
+                    letter-spacing: -0.24px;
+                    color: #404040;
+                    margin-bottom: 8px;
+                }
+                .kanan {
+                    width: 100%;
+                    padding: 10px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #BFBFBF;
+    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+    
+                .calendar {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 100%;
+                    padding: 6px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #BFBFBF;
+    
+                     input {
+                        border: none;
+    
+                        &:focus {
+                            outline: none;
+                            border: none;
+                        }
+                     }
+    
+                     img {
+                        width: 32px;
+                        height: 32px;
+                     }
+                }
+            }
+        }
+    }
+}
+
+/* MEDIUM  */
+@media (min-width: 426px) {
+    .addBeritaContainer {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+    
+        h5 {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+    
+        .title {
+            border: none;
+            background: transparent;
+            font-size: 24px;
+            line-height: 48px;
+            letter-spacing: -0.24px;
+            margin-bottom: 20px;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        .dragDrop {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+    
+            .dropzone {
+                width: 100%;
+                border-radius: 10px;
+                border: 2px dashed #808080;
+                background-color: #f6fff9;
+                justify-content: center;
+                display: flex;
+                padding: 80px 60px;
+    
+                .isi {
+                    width: 400px;
+    
+                    .imgContainer {
+                        display: flex;
+                        justify-content: center;
+            
+                        img {
+                          display: block;
+                          width: 40px;
+                          text-align: center;
+                          margin-bottom: 16px;
+                        }
+                      }
+            
+                      h1 {
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: black;
+                        line-height: 25px;
+                        letter-spacing: -0.24px;
+                        margin-bottom: 8px;
+            
+                        span {
+                          color: #0047ff;
+                          cursor: pointer;
+                        }
+                      }
+            
+                      p {
+                        display: block;
+                        text-align: center;
+                        font-size: 12px;
+                        line-height: 18px;
+                        letter-spacing: -0.24px;
+                        color: #808080;
+                      }
+    
+                      ul {
+                        display: flex;
+                        justify-content: start;
+                        padding: 0;
+                        /* gap: 8px; */
+    
+                        li {
+                           color: #808080;
+                           font-size: 12px;
+                           line-height: 18px;
+                        letter-spacing: -0.24px;
+                        }
+    
+                        .listGanjil {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+      
+                
+              }
+    
+        }
+    
+        .tglJurnalis {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+    
+            .col {
+                label {
+                    display: block;
+                    font-size: 14px;
+                    letter-spacing: -0.24px;
+                    color: #404040;
+                    margin-bottom: 8px;
+                }
+                .kanan {
+                    width: 100%;
+                    padding: 10px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #BFBFBF;
+    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+    
+                .calendar {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 100%;
+                    padding: 6px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #BFBFBF;
+    
+                     input {
+                        border: none;
+    
+                        &:focus {
+                            outline: none;
+                            border: none;
+                        }
+                     }
+    
+                     img {
+                        width: 32px;
+                        height: 32px;
+                     }
+                }
+            }
+        }
+    }
+}
+
+/* LAPTOP */
+@media (min-width: 769px) {
+    .addBeritaContainer {
+        background: white;
+        border-radius: 20px;
+        padding: 20px 30px;
+
+        .row {
+            padding: 0;
+            margin: 0;
+        }
+    
+        h5 {
+            font-size: 13px;
+            padding: 0;
+            margin: 0;
+            /* margin-bottom: 10px; */
+            width: 100%;
+        }
+    
+        .bold-text {
+            font-weight: bold;
+          }
+
+        .title {
+            width: 100%;
+            border: none;
+            background: transparent;
+            font-size: 15px;
+            line-height: 48px;
+            letter-spacing: -0.24px;
+            margin-bottom: 20px;
+            padding: 0;
+            margin: 0;
+            
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        .dragDrop {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            padding: 0;
+    
+            .dropzone {
+                width: 100%;
+                border-radius: 10px;
+                border: 2px dashed #808080;
+                background-color: #f6fff9;
+                justify-content: center;
+                display: flex;
+                padding: 60px 60px;
+    
+                .isi {
+                    width: 450px;
+    
+                    .imgContainer {
+                        display: flex;
+                        justify-content: center;
+            
+                        img {
+                          display: block;
+                          width: 40px;
+                          text-align: center;
+                          margin-bottom: 16px;
+                        }
+                      }
+            
+                      h1 {
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: black;
+                        line-height: 25px;
+                        letter-spacing: -0.24px;
+                        margin-bottom: 8px;
+            
+                        span {
+                          color: #0047ff;
+                          cursor: pointer;
+                        }
+                      }
+            
+                      p {
+                        display: block;
+                        text-align: center;
+                        font-size: 12px;
+                        line-height: 18px;
+                        letter-spacing: -0.24px;
+                        color: #808080;
+                      }
+    
+                      ul {
+                        display: flex;
+                        justify-content: start;
+                        padding: 0;
+                        /* gap: 8px; */
+    
+                        li {
+                           color: #808080;
+                           font-size: 12px;
+                           line-height: 18px;
+                        letter-spacing: -0.24px;
+                        }
+    
+                        .listGanjil {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+      
+                
+              }
+    
+        }
+    
+        .tglJurnalis {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+    
+            .col {
+                padding: 0;
+
+                label {
+                    display: block;
+                    font-size: 14px;
+                    letter-spacing: -0.24px;
+                    color: #404040;
+                    margin-bottom: 8px;
+                   
+                }
+                .kanan {
+                    width: 100%;
+                    padding: 10px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #BFBFBF;
+    
+                    &:focus {
+                        outline: none;
+                    } 
+                    &::placeholder {
+                        font-size: 14px;
+                    }
+                }
+    
+                .calendar {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 100%;
+                    padding: 6px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #BFBFBF;
+    
+                     input {
+                        border: none;
+    
+                        &:focus {
+                            outline: none;
+                            border: none;
+                        }
+                        &::placeholder {
+                            font-size: 14px;
+                        }
+                        
+                     }
+    
+                     img {
+                        width: 25px;
+                     }
+                }
+            }
+        }
+    }
+}
+
+/* LAPTOP L*/
+@media (min-width: 1025px) {
+    .addBeritaContainer {
+        background: white;
+        border-radius: 20px;
+        padding: 30px;
+    
+        h5 {
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+        }
+    
+        .title {
+            border: none;
+            background: transparent;
+            font-size: 24px;
+            line-height: 48px;
+            letter-spacing: -0.24px;
+            margin-bottom: 20px;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        .dragDrop {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+    
+            .dropzone {
+                width: 100%;
+                border-radius: 10px;
+                border: 2px dashed #808080;
+                background-color: #f6fff9;
+                justify-content: center;
+                display: flex;
+                padding: 80px 60px;
+    
+                .isi {
+                    width: 400px;
+    
+                    .imgContainer {
+                        display: flex;
+                        justify-content: center;
+            
+                        img {
+                          display: block;
+                          width: 40px;
+                          text-align: center;
+                          margin-bottom: 16px;
+                        }
+                      }
+            
+                      h1 {
+                        display: block;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: black;
+                        line-height: 25px;
+                        letter-spacing: -0.24px;
+                        margin-bottom: 8px;
+            
+                        span {
+                          color: #0047ff;
+                          cursor: pointer;
+                        }
+                      }
+            
+                      p {
+                        display: block;
+                        text-align: center;
+                        font-size: 12px;
+                        line-height: 18px;
+                        letter-spacing: -0.24px;
+                        color: #808080;
+                      }
+    
+                      ul {
+                        display: flex;
+                        justify-content: start;
+                        padding: 0;
+                        /* gap: 8px; */
+    
+                        li {
+                           color: #808080;
+                           font-size: 12px;
+                           line-height: 18px;
+                        letter-spacing: -0.24px;
+                        }
+    
+                        .listGanjil {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+      
+                
+              }
+    
+        }
+    
+        .tglJurnalis {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 30px;
+    
+            .col {
+                label {
+                    display: block;
+                    font-size: 14px;
+                    letter-spacing: -0.24px;
+                    color: #404040;
+                    margin-bottom: 8px;
+                }
+                .kanan {
+                    width: 100%;
+                    padding: 10px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #BFBFBF;
+    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+    
+                .calendar {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    width: 100%;
+                    padding: 6px 12px;
+                    border-radius: 10px;
+                    border: 1px solid #BFBFBF;
+    
+                     input {
+                        border: none;
+    
+                        &:focus {
+                            outline: none;
+                            border: none;
+                        }
+                     }
+    
+                     img {
+                        width: 32px;
+                        height: 32px;
+                     }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
