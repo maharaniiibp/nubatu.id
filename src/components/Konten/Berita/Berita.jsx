@@ -149,7 +149,7 @@ const Berita = ({ data }) => {
                   return search.toLowerCase() === ""
                     ? item
                     : item.title.toLowerCase().includes(search) ||
-                        item.inisiator.toLowerCase().includes(search);
+                        item.jurnalis.toLowerCase().includes(search);
                 })
                 .map((item, index) => (
                   <tr key={`filtered-${index}`} className="item">

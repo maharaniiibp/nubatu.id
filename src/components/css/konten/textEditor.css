@@ -1,0 +1,591 @@
+/* .textEditor {
+  width: 100%;
+display: flex; */
+
+/* PHONE  */
+@media (max-width: 425px) {
+  .toolbar {
+    display: flex;
+    align-items: center;
+    background: #bfbfbf;
+    padding: 8px;
+    border-radius: 10px 10px 0 0;
+    gap: 16px;
+    margin: 0;
+  
+    .dropdown-toggle {
+      width: fit-content;
+      background: white !important;
+      border: 1px solid #808080;
+      padding: 10px 13px;
+      color: black;
+  
+      &::after {
+        margin-left: 25px !important;
+      }
+    }
+  
+    button {
+      background: white;
+      padding: 9px;
+      border: none;
+  
+      &:active {
+        background: #dddd;
+        border: 1px solid red;
+      }
+  
+      img,
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  
+    .awal {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #808080;
+    }
+  
+    .link {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #808080;
+      border-right: none;
+    }
+  
+    .tengah {
+      border-top: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+    }
+  
+    .akhir {
+      border-radius: 0 10px 10px 0;
+      border: 1px solid #808080;
+    }
+  }
+  
+  /* Basic editor styles */
+  .tiptap {
+    > * + * {
+      margin-top: 0.75em;
+    }
+  
+    ul,
+    ol {
+      padding: 0 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.1;
+    }
+  
+    code {
+      background-color: #cfcfcf;
+      color: #616161;
+    }
+  
+    pre {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: "JetBrainsMono", monospace;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+  
+      code {
+        color: inherit;
+        padding: 0;
+        background: none;
+        font-size: 0.8rem;
+      }
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    blockquote {
+      padding-left: 1rem;
+      border-left: 2px solid #9c9c9c;
+    }
+  
+    hr {
+      border: none;
+      border-top: 2px solid #9c9c9c;
+      margin: 2rem 0;
+    }
+  
+    a {
+      color: #68cef8;
+    }
+  
+    code {
+      background-color: rgba(#616161, 0.1);
+      border-radius: 0.25em;
+      box-decoration-break: clone;
+      color: #616161;
+      font-size: 0.9rem;
+      padding: 0.25em;
+    }
+  }
+  
+  .ProseMirror {
+    margin: 0;
+    padding: 12px 14px;
+    display: block;
+    height: 200px;
+    border: 1px solid #bfbfbf;
+    border-radius: 0 0 10px 10px;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+/* TABLET  */
+@media (min-width: 426px) {
+  .toolbar {
+    display: flex;
+    align-items: center;
+    background: #bfbfbf;
+    padding: 8px;
+    border-radius: 10px 10px 0 0;
+    gap: 16px;
+    margin: 0;
+  
+    .dropdown-toggle {
+      width: fit-content;
+      background: white !important;
+      border: 1px solid #808080;
+      padding: 10px 13px;
+      color: black;
+  
+      &::after {
+        margin-left: 25px !important;
+      }
+    }
+  
+    button {
+      background: white;
+      padding: 9px;
+      border: none;
+  
+      &:active {
+        background: #dddd;
+        border: 1px solid red;
+      }
+  
+      img,
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  
+    .awal {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #808080;
+    }
+  
+    .link {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #808080;
+      border-right: none;
+    }
+  
+    .tengah {
+      border-top: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+    }
+  
+    .akhir {
+      border-radius: 0 10px 10px 0;
+      border: 1px solid #808080;
+    }
+  }
+  
+  /* Basic editor styles */
+  .tiptap {
+    > * + * {
+      margin-top: 0.75em;
+    }
+  
+    ul,
+    ol {
+      padding: 0 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.1;
+    }
+  
+    code {
+      background-color: #cfcfcf;
+      color: #616161;
+    }
+  
+    pre {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: "JetBrainsMono", monospace;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+  
+      code {
+        color: inherit;
+        padding: 0;
+        background: none;
+        font-size: 0.8rem;
+      }
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    blockquote {
+      padding-left: 1rem;
+      border-left: 2px solid #9c9c9c;
+    }
+  
+    hr {
+      border: none;
+      border-top: 2px solid #9c9c9c;
+      margin: 2rem 0;
+    }
+  
+    a {
+      color: #68cef8;
+    }
+  
+    code {
+      background-color: rgba(#616161, 0.1);
+      border-radius: 0.25em;
+      box-decoration-break: clone;
+      color: #616161;
+      font-size: 0.9rem;
+      padding: 0.25em;
+    }
+  }
+  
+  .ProseMirror {
+    margin: 0;
+    padding: 12px 14px;
+    display: block;
+    height: 200px;
+    border: 1px solid #bfbfbf;
+    border-radius: 0 0 10px 10px;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+/* LAPTOP  */
+@media (min-width: 769px) {
+  .toolbar {
+    display: flex;
+    align-items: center;
+    background: #bfbfbf;
+    padding: 6px;
+    border-radius: 10px 10px 0 0;
+    gap: 16px;
+    margin: 0;
+  
+    .dropdown-toggle {
+      width: fit-content;
+      background: white !important;
+      border: 1px solid #808080;
+      padding: 4px 7px;
+      color: black;
+      font-size: 13px;
+  
+      &::after {
+        margin-left: 25px !important;
+      }
+    }
+  
+    button {
+      background: white;
+      padding: 7px 8px;
+      border: none;
+  
+      &:active {
+        background: #dddd;
+        border: 1px solid red;
+      }
+  
+      img,
+      svg {
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  
+    .awal {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #808080;
+    }
+  
+    .link {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #808080;
+      border-right: none;
+    }
+  
+    .tengah {
+      border-top: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+    }
+  
+    .akhir {
+      border-radius: 0 10px 10px 0;
+      border: 1px solid #808080;
+    }
+  }
+  
+  /* Basic editor styles */
+  .tiptap {
+    > * + * {
+      margin-top: 0.75em;
+    }
+  
+    ul,
+    ol {
+      padding: 0 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.1;
+    }
+  
+    code {
+      background-color: #cfcfcf;
+      color: #616161;
+    }
+  
+    pre {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: "JetBrainsMono", monospace;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+  
+      code {
+        color: inherit;
+        padding: 0;
+        background: none;
+        font-size: 0.8rem;
+      }
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    blockquote {
+      padding-left: 1rem;
+      border-left: 2px solid #9c9c9c;
+    }
+  
+    hr {
+      border: none;
+      border-top: 2px solid #9c9c9c;
+      margin: 2rem 0;
+    }
+  
+    a {
+      color: #68cef8;
+    }
+  
+    code {
+      background-color: rgba(#616161, 0.1);
+      border-radius: 0.25em;
+      box-decoration-break: clone;
+      color: #616161;
+      font-size: 0.9rem;
+      padding: 0.25em;
+    }
+  }
+  
+  .ProseMirror {
+    margin: 0;
+    padding: 12px 14px;
+    display: block;
+    height: 180px;
+    border: 1px solid #bfbfbf;
+    border-radius: 0 0 10px 10px;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+/* LAPTOP L  */
+@media (min-width: 1025px) {
+  .toolbar {
+    display: flex;
+    align-items: center;
+    background: #bfbfbf;
+    padding: 8px;
+    border-radius: 10px 10px 0 0;
+    gap: 16px;
+    margin: 0;
+  
+    .dropdown-toggle {
+      width: fit-content;
+      background: white !important;
+      border: 1px solid #808080;
+      padding: 10px 13px;
+      color: black;
+  
+      &::after {
+        margin-left: 25px !important;
+      }
+    }
+  
+    button {
+      background: white;
+      padding: 9px;
+      border: none;
+  
+      &:active {
+        background: #dddd;
+        border: 1px solid red;
+      }
+  
+      img,
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  
+    .awal {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #808080;
+    }
+  
+    .link {
+      border-radius: 10px 0 0 10px;
+      border: 1px solid #808080;
+      border-right: none;
+    }
+  
+    .tengah {
+      border-top: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+    }
+  
+    .akhir {
+      border-radius: 0 10px 10px 0;
+      border: 1px solid #808080;
+    }
+  }
+  
+  /* Basic editor styles */
+  .tiptap {
+    > * + * {
+      margin-top: 0.75em;
+    }
+  
+    ul,
+    ol {
+      padding: 0 1rem;
+    }
+  
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.1;
+    }
+  
+    code {
+      background-color: #cfcfcf;
+      color: #616161;
+    }
+  
+    pre {
+      background: #0d0d0d;
+      color: #fff;
+      font-family: "JetBrainsMono", monospace;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+  
+      code {
+        color: inherit;
+        padding: 0;
+        background: none;
+        font-size: 0.8rem;
+      }
+    }
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    blockquote {
+      padding-left: 1rem;
+      border-left: 2px solid #9c9c9c;
+    }
+  
+    hr {
+      border: none;
+      border-top: 2px solid #9c9c9c;
+      margin: 2rem 0;
+    }
+  
+    a {
+      color: #68cef8;
+    }
+  
+    code {
+      background-color: rgba(#616161, 0.1);
+      border-radius: 0.25em;
+      box-decoration-break: clone;
+      color: #616161;
+      font-size: 0.9rem;
+      padding: 0.25em;
+    }
+  }
+  
+  .ProseMirror {
+    margin: 0;
+    padding: 12px 14px;
+    display: block;
+    height: 200px;
+    border: 1px solid #bfbfbf;
+    border-radius: 0 0 10px 10px;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
