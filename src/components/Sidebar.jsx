@@ -59,7 +59,7 @@ function SidebarCobaLagi({ children }) {
           icon: <img src="./sidebar/dot.svg" alt="icon" />,
         },
         {
-          path: "/event",
+          path: "/events",
           name: "Event",
           icon: <img src="./sidebar/dot.svg" alt="icon" />,
         },

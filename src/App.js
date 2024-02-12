@@ -20,6 +20,8 @@ import Navbar from "./components/Navbar"
 import AddProgram from "./components/koin nusantara/Campaign Program/addProgram"
 import Donatur from "./components/koin nusantara/Donatur/Donatur"
 import AddBerita from "./components/Konten/Berita/addBerita"
+import Events from "./components/Konten/Event/events"
+
 // import AddBerita from "./components/Konten/Berita/addBerita"
 // import NotFound from "./pages/notFound"; 
 
@@ -54,6 +56,8 @@ function App() {
           <Route path="/addBerita" element={<AddBerita />} />
           <Route path="/beranda" element={<Beranda />} />
           <Route path="/nderektanglet" element={<Nderektanglet />} />
+          <Route path="/events" element={<Events />} />
+
           {/* <Route path="*" element={<NotFound />} /> */}
 
         </Routes>
