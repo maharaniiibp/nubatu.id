@@ -1,6 +1,6 @@
 import React from 'react'
 // import dataTable from "../../../data/campaign.json";
-import "../../css/koinNusantara/campaignProgram.css";
+import "../../css/koinNusantara/dataNama.css";
 
 const DataNama = ({ item }) => {
     return (

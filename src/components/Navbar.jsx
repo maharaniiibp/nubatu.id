@@ -93,7 +93,8 @@ const Navbar = () => {
 
           {/* Nav nya ADD PROGRAM  */}
           {isAddProgramNav && (
-            <>
+          <>
+            <div className="addProgramNav">
               <div className="navKiri">
                 <div className="pageName">
                   <img
@@ -111,12 +112,92 @@ const Navbar = () => {
                 <Link to="">
                   <button className="simpanPengajuan">Simpan Pengajuan</button>
                 </Link>
-                {/* <Link to=""> */}
                 <button className="verifikasiProgram" onClick={handleShow}>
                   Verifikasi Program
                 </button>
+              </div>
+              </div>
+            </>
+          )}
 
-                <Modal
+          {/* Nav nya DONATUR  */}
+          {isDonatur && (
+            <>
+              <div className="navKiri">
+                <div className="pageName">
+                  <p>{pageName}</p>
+                </div>
+              </div>
+
+              <div className="navKanan">
+                <div className="account">
+                  <img src="./sidebar/profil.svg" alt="Me" className="photo" />
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* Nav nya Berita */}
+          {isKontenNav && (
+            <>
+              <div className="navKiri">
+                <div className="pageName">
+                  <p>{pageName}</p>
+                </div>
+              </div>
+
+              <div className="navKanan">
+                <Link to="/addBerita">
+                  <button className="addProgram">
+                    Tambah Berita
+                    <img src="./koinNusantara/plus.svg" alt="" />
+                  </button>
+                </Link>
+
+                <div className="account">
+                  <img src="./sidebar/profil.svg" alt="Me" className="photo" />
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* Nav nya ADD PROGRAM  */}
+          {isAddBeritaNav && (
+            <>
+              <div className="navKiri">
+                <div className="pageName">
+                  <div>
+                    <img
+                      className="arrowLeft"
+                      src="./sidebar/arrow-left.svg"
+                      alt=""
+                    />
+                  </div>
+                  <Link to="./konten">
+                    <button className="kembali">Kembali</button>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="navKanan">
+                <Link to="">
+                  <button className="simpanPengajuan">
+                    Simpan sebagai draft
+                  </button>
+                </Link>
+                {/* <Link to=""> */}
+                <button className="verifikasiProgram" onClick={handleShow}>
+                  Publish sekarang
+                </button>
+
+                {/* </Link> */}
+              </div>
+            </>
+          )}
+        {/* </div> */}
+      </div>
+
+      <Modal
                   show={show}
                   size="lg"
                   onHide={handleClose}
@@ -212,88 +293,6 @@ const Navbar = () => {
                     </Row>
                   </Modal.Body>
                 </Modal>
-
-                {/* </Link> */}
-              </div>
-            </>
-          )}
-
-          {/* Nav nya DONATUR  */}
-          {isDonatur && (
-            <>
-              <div className="navKiri">
-                <div className="pageName">
-                  <p>{pageName}</p>
-                </div>
-              </div>
-
-              <div className="navKanan">
-                <div className="account">
-                  <img src="./sidebar/profil.svg" alt="Me" className="photo" />
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* Nav nya Berita */}
-          {isKontenNav && (
-            <>
-              <div className="navKiri">
-                <div className="pageName">
-                  <p>{pageName}</p>
-                </div>
-              </div>
-
-              <div className="navKanan">
-                <Link to="/addBerita">
-                  <button className="addProgram">
-                    Tambah Berita
-                    <img src="./koinNusantara/plus.svg" alt="" />
-                  </button>
-                </Link>
-
-                <div className="account">
-                  <img src="./sidebar/profil.svg" alt="Me" className="photo" />
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* Nav nya ADD PROGRAM  */}
-          {isAddBeritaNav && (
-            <>
-              <div className="navKiri">
-                <div className="pageName">
-                  <div>
-                    <img
-                      className="arrowLeft"
-                      src="./sidebar/arrow-left.svg"
-                      alt=""
-                    />
-                  </div>
-                  <Link to="./konten">
-                    <button className="kembali">Kembali</button>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="navKanan">
-                <Link to="">
-                  <button className="simpanPengajuan">
-                    Simpan sebagai draft
-                  </button>
-                </Link>
-                {/* <Link to=""> */}
-                <button className="verifikasiProgram" onClick={handleShow}>
-                  Publish sekarang
-                </button>
-
-                {/* </Link> */}
-              </div>
-            </>
-          )}
-        {/* </div> */}
-      </div>
     </>
   );
 };

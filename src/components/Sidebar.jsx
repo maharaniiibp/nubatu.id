@@ -89,7 +89,7 @@ function SidebarCobaLagi({ children }) {
   return (
     <>
       <div className="containerSidebarCobaLagi">
-        <div style={{ width: isOpen ? "250px" : "80px" }} className="sidebar">
+        <div style={{ width: isOpen ? "250px" : "70px" }} className="sidebar">
           <div
             style={{
               display: "flex",
