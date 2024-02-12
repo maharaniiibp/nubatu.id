@@ -18,7 +18,19 @@ const InformasiUmum = () => {
 
     // =====================
     const [image, setImage] = useState(null);
-    const [fileName, setFileName] = useState("No selected file");
+  const [fileName, setFileName] = useState("No selected file");
+  
+
+  // HOVER 
+  const [isHovered, setIsHovered] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+  
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+  
   return (
     <>
       <div className="addProgram">
@@ -27,9 +39,9 @@ const InformasiUmum = () => {
             <h3>Detail program</h3>
             <div className="isi">
               <div className="top">
-                <span>Nama Program</span>
+                <label>Nama Program</label>
                 <input placeholder="Nama Program" type="text" />
-                <span>Deskripsi</span>
+                <label>Deskripsi</label>
                 <textarea
                   placeholder="E.g Deskripsi detail"
                   name=""
@@ -56,20 +68,16 @@ const InformasiUmum = () => {
             <h3>Gambar sampul</h3>
                       <div className="top">
                           
-              {files && (
-                <div className="uploads">
-                  <div className="actions">
-                    <button onClick={() => setFiles(null)}>Cancel</button>
-                    <button onClick={handleUpload}>Upload</button>
-                  </div>
-                </div>
-              )}
 
+
+              
               {!files && (
                 <div
                   className="dropzone"
                   onDragOver={handleDragOver}
                   onDrop={handleDrop}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
                   <div>
                     <div className="imgContainer">
@@ -96,8 +104,19 @@ const InformasiUmum = () => {
                       ref={inputRef}
                     />
                   </div>
+                  {files && isHovered && (
+    <div className="uploads">
+      <div className="actions">
+        <button onClick={() => setFiles(null)}>Cancel</button>
+        <button onClick={handleUpload}>Upload</button>
+      </div>
+    </div>
+  )}
                 </div>
+                
               )}
+
+              {/* ============================ */}
 
               {files && (
                 <div className="selectedImages">
@@ -125,7 +144,22 @@ const InformasiUmum = () => {
                               <img src={image} width={150} height={150} alt={fileName} /> : "ayo upload"   }
                       </form> */}
 
-                      
+{files && (
+                <div className="uploads">
+                  <div className="actions">
+                    <button onClick={() => setFiles(null)}>Cancel</button>
+                    <button onClick={handleUpload}>Upload</button>
+                  </div>
+                </div>
+              )}  
+{/* {files && (
+                <div className="uploads">
+                  <div className="actions">
+                    <button onClick={() => setFiles(null)}>Cancel</button>
+                    <button onClick={handleUpload}>Upload</button>
+                  </div>
+                </div>
+              )}   */}
 
                       {/* =================== */}
             <div className="bottom">

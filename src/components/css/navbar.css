@@ -16,16 +16,56 @@
     color: #333;
     background-color: #EDF6F0;
     margin-bottom: 20px;
+    padding: 20px 0;
   
-    .navbarContainer {
-      /* border: 1px solid red; */
-      display: flex;
+    /* .navbarContainer { */
+      /* display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between; */
+      
+  .koinNav {
+    /* background: red; */
+    display: flex;
       width: 100%;
       align-items: center;
       justify-content: space-between;
-      /* padding: 0 40px; */
+
+    .navKanan {
+      display: flex;
+      align-items: center;
+      /* gap: 24px; */
+      gap: 12px;
       
-  
+      .addProgram {
+        /* padding: 12px 12px;
+        font-size: 14px; */
+        padding: 8px;
+        background-color: #078d41;
+        color: white;
+        font-size: 14px;
+        font-weight: semi-bold;
+        border-radius: 10px;
+        border: none;
+
+        img {
+          width: 17px;
+          height: 17px;
+        }
+      }
+      
+      .account {
+        /* background: yellow; */
+        height: 100%;
+        .photo {
+          /* width: 56px; */
+          height: 45px;
+          border-radius: 50px;
+          border: 3px solid #009b4c;
+        }
+      }
+    }
+  }
       .navKanan {
         display: flex;
         align-items: center;
@@ -41,12 +81,12 @@
         margin: 0;
       }
   
-      .photo {
+      /* .photo {
         width: 56px;
         height: 56px;
         border-radius: 50px;
         border: 3px solid #009b4c;
-      }
+      } */
   
       .navKiri {
         .pageName {
@@ -67,7 +107,7 @@
           }
         }
       }
-    }
+    /* } */
   }
 
   

@@ -60,14 +60,15 @@ const Navbar = () => {
   if (isBerandaNav) {
     return null; // Mengembalikan null untuk tidak merender apapun jika beranda
   }
-  
+
   return (
     <>
       <div className="navbar">
-        <div className="navbarContainer">
+        {/* <div className="navbarContainer"> */}
           {/* Nav nya KOIN  */}
           {isKoinNav && (
             <>
+              <div className="koinNav">
               <div className="navKiri">
                 <div className="pageName">
                   <p>{pageName}</p>
@@ -85,6 +86,7 @@ const Navbar = () => {
                 <div className="account">
                   <img src="./sidebar/profil.svg" alt="Me" className="photo" />
                 </div>
+                </div>
               </div>
             </>
           )}
@@ -100,8 +102,8 @@ const Navbar = () => {
                     alt=""
                   />
                   <Link to="./koin">
-                  <button className="kembali">Kembali</button>
-                </Link>
+                    <button className="kembali">Kembali</button>
+                  </Link>
                 </div>
               </div>
 
@@ -200,9 +202,11 @@ const Navbar = () => {
                         <div className="buttonContainer">
                           <button className="back" onClick={handleClose}>
                             <img src="./koinNusantara/back.svg" alt="" />
-                           Kembali 
+                            Kembali
                           </button>
-                          <button className="setuju" onClick={handleClose}>Saya setuju</button>
+                          <button className="setuju" onClick={handleClose}>
+                            Saya setuju
+                          </button>
                         </div>
                       </Col>
                     </Row>
@@ -230,7 +234,7 @@ const Navbar = () => {
               </div>
             </>
           )}
-          
+
           {/* Nav nya Berita */}
           {isKontenNav && (
             <>
@@ -255,26 +259,29 @@ const Navbar = () => {
             </>
           )}
 
-                    {/* Nav nya ADD PROGRAM  */}
-                    {isAddBeritaNav && (
+          {/* Nav nya ADD PROGRAM  */}
+          {isAddBeritaNav && (
             <>
               <div className="navKiri">
                 <div className="pageName">
                   <div>
-                  <img
-                    className="arrowLeft"
-                    src="./sidebar/arrow-left.svg"
-                    alt=""
-                  /></div>
+                    <img
+                      className="arrowLeft"
+                      src="./sidebar/arrow-left.svg"
+                      alt=""
+                    />
+                  </div>
                   <Link to="./konten">
-                  <button className="kembali">Kembali</button>
-                </Link>
+                    <button className="kembali">Kembali</button>
+                  </Link>
                 </div>
               </div>
 
               <div className="navKanan">
                 <Link to="">
-                  <button className="simpanPengajuan">Simpan sebagai draft</button>
+                  <button className="simpanPengajuan">
+                    Simpan sebagai draft
+                  </button>
                 </Link>
                 {/* <Link to=""> */}
                 <button className="verifikasiProgram" onClick={handleShow}>
@@ -285,10 +292,7 @@ const Navbar = () => {
               </div>
             </>
           )}
-
-            
-
-        </div>
+        {/* </div> */}
       </div>
     </>
   );
