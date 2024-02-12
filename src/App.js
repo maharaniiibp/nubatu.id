@@ -21,6 +21,7 @@ import AddProgram from "./components/koin nusantara/Campaign Program/addProgram"
 import Donatur from "./components/koin nusantara/Donatur/Donatur"
 import AddBerita from "./components/Konten/Berita/addBerita"
 // import AddBerita from "./components/Konten/Berita/addBerita"
+// import NotFound from "./pages/notFound"; 
 
 function App() {
   const currentPath = window.location.pathname;
@@ -34,12 +35,16 @@ function App() {
       <Login />
     ) : (
       // Tampilkan sidebar dan navbar hanya untuk halaman selain login
+      //     <Routes >
+      // <Route
+      // path="/*"
+      // element={
       <Sidebar>
         <Navbar />
         <Routes>
-// <<<<<<< yasmin
+{/* // <<<<<<< yasmin */}
           <Route path="/koin" element={<Koin />} />
-          <Route path="/nderek" element={<Nderek />} />
+          <Route path="/nderek" element={<Nderektanglet />} />
           <Route path="/konten" element={<Konten />} />
           <Route path="/anggota" element={<Anggota />} />
           <Route path="/pengurus" element={<Pengurus />} />
@@ -49,20 +54,13 @@ function App() {
           <Route path="/addBerita" element={<AddBerita />} />
           <Route path="/beranda" element={<Beranda />} />
           <Route path="/nderektanglet" element={<Nderektanglet />} />
-// =======
-//         <Route path="/" Component={Login} />
-//         <Route path="/beranda" Component={Beranda} />
-//         <Route path="/koin" Component={Koin} />
-//         <Route path="/nderektanglet" Component={Nderektanglet} />
-//         <Route path="/konten" Component={Konten} />
-//         <Route path="/anggota" Component={Anggota} />
-//         <Route path="/pengurus" Component={Pengurus} />
-//         <Route path="/pengaturan" Component={Pengaturan} />
-//         <Route path="/addProgram" Component={AddProgram} />
-//         <Route path="/donatur" Component={Donatur} />
-// >>>>>>> main
+          {/* <Route path="*" element={<NotFound />} /> */}
+
         </Routes>
-      </Sidebar>
+               </Sidebar>
+          // }
+          //   />
+          //   </Routes>
     )}
   </div>
   );
