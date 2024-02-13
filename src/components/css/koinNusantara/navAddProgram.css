@@ -1,24 +1,94 @@
-.navContainer {
+/* PHONE  */
+@media (max-width: 425px) {
+  .navContainer {
+    width: 100%;
 
     .menu {
+      width: 100%;
+      display: flex;
+      flex-direction: flex-wrap;
+      justify-content: center;
 
-        a {
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: semi-bold;
-            color: #404040;
-            padding: 12px 10px;
-            border-radius: 10px;
-        
-            &:hover {
-              color: black;
-              border: 1px solid #009b4c;
-              font-weight: bold;
-            }
-        
-            &:active {
-              color: black;
-            }
-          }
+      a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: semi-bold;
+        color: #404040;
+        padding: 12px 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+        &:hover {
+          color: black;
+          border: 1px solid #009b4c;
+          font-weight: bold;
+        }
+
+        &:active {
+          color: black;
+        }
+      }
     }
+  }
+}
+
+/* TABLET  */
+@media (min-width: 426px) {
+  .navContainer {
+    .menu {
+
+      a {
+   margin-right: 10px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: semi-bold;
+        color: #404040;
+        padding: 12px 10px;
+        border-radius: 10px;
+
+        &:hover {
+          color: black;
+          border: 1px solid #009b4c;
+          font-weight: bold;
+        }
+
+        &:active {
+          color: black;
+        }
+      }
+    }
+  }
+  /* .navContainer {
+    .menu {
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: semi-bold;
+        color: #404040;
+        padding: 12px 10px;
+        border-radius: 10px;
+
+        &:hover {
+          color: black;
+          border: 1px solid #009b4c;
+          font-weight: bold;
+        }
+
+        &:active {
+          color: black;
+        }
+      }
+    }
+  } */
+}
+
+/* LAPTOP  */
+@media (min-width: 769px) {
+}
+
+/* LAPTOP L  */
+@media (min-width: 1025px) {
 }

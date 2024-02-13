@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import "../../css/koinNusantara/addProgram.css";
+import "../../css/koinNusantara/informasiUmum.css";
 import { Row, Col } from "react-bootstrap";
 
 const InformasiUmum = () => {
@@ -13,24 +13,22 @@ const InformasiUmum = () => {
     setFiles(event.dataTransfer.files);
   };
 
-    const handleUpload = () => { };
-    
+  const handleUpload = () => {};
 
-    // =====================
-    const [image, setImage] = useState(null);
+  // =====================
+  const [image, setImage] = useState(null);
   const [fileName, setFileName] = useState("No selected file");
-  
 
-  // HOVER 
+  // HOVER
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
-  
+
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  
+
   return (
     <>
       <div className="addProgram">
@@ -51,7 +49,7 @@ const InformasiUmum = () => {
                 ></textarea>
               </div>
               <div className="bottom">
-                <h3>Dana yang diajukan</h3>
+                <p className="dana">Dana yang diajukan</p>
                 <div className="inputDana">
                   <div className="rpIcon">
                     <span> Rp</span>
@@ -61,16 +59,11 @@ const InformasiUmum = () => {
               </div>
               <tr></tr>
             </div>
-                  </Col>
-                  
+          </Col>
 
           <Col className="kanan">
             <h3>Gambar sampul</h3>
-                      <div className="top">
-                          
-
-
-              
+            <div className="top">
               {!files && (
                 <div
                   className="dropzone"
@@ -85,10 +78,10 @@ const InformasiUmum = () => {
                     </div>
 
                     <h1>
-                      Drag & drop image to upload, or{" "}
+                      Drag & drop image to upload, or {" "}
                       <span onClick={() => inputRef.current.click()}>
-                        browse
-                      </span>{" "}
+                      {" "} browse
+                      </span>
                     </h1>
                     <p>
                       800x600px size required in PNG or
@@ -104,16 +97,8 @@ const InformasiUmum = () => {
                       ref={inputRef}
                     />
                   </div>
-                  {files && isHovered && (
-    <div className="uploads">
-      <div className="actions">
-        <button onClick={() => setFiles(null)}>Cancel</button>
-        <button onClick={handleUpload}>Upload</button>
-      </div>
-    </div>
-  )}
+
                 </div>
-                
               )}
 
               {/* ============================ */}
@@ -128,45 +113,23 @@ const InformasiUmum = () => {
                   ))}
                 </div>
               )}
-                      </div>
-                      
-                      {/* ====================== */}
-                      {/* <form action=""
-                      onClick={() => document.querySelector(".input-field").click()}>
-                          <input type="file" accept="image/*" className="input-field" hidden
-                              onChange={({ target: { files } }) => {
-                                  files[0] && setFileName(files[0].name)
-                                  if (files) {
-                                      setImage(URL.createObjectURL(files[0]))
-                                  }
-                          }} />
-                          {image ? 
-                              <img src={image} width={150} height={150} alt={fileName} /> : "ayo upload"   }
-                      </form> */}
+            </div>
 
-{files && (
-                <div className="uploads">
-                  <div className="actions">
-                    <button onClick={() => setFiles(null)}>Cancel</button>
-                    <button onClick={handleUpload}>Upload</button>
-                  </div>
+            {files && (
+              <div className="uploads">
+                <div className="actions">
+                  <button onClick={() => setFiles(null)}>Cancel</button>
+                  {/* <button onClick={handleUpload}>Upload</button> */}
                 </div>
-              )}  
-{/* {files && (
-                <div className="uploads">
-                  <div className="actions">
-                    <button onClick={() => setFiles(null)}>Cancel</button>
-                    <button onClick={handleUpload}>Upload</button>
-                  </div>
-                </div>
-              )}   */}
+              </div>
+            )}
 
-                      {/* =================== */}
+            {/* =================== */}
             <div className="bottom">
-              <h3>Inisiator</h3>
+              <p className="inisiator">Inisiator</p>
               <div className="inisiatorProf">
                 <img src="./sidebar/profil.svg" alt="" />
-                <p>Administrator</p>
+                <p className="administrator">Administrator</p>
               </div>
             </div>
           </Col>
