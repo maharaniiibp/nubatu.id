@@ -295,6 +295,10 @@
                     outline: none;
                   }
                 }
+
+                textarea {
+                  height: 200px;
+                }
     
                 label {
                   font-size: 14px;
