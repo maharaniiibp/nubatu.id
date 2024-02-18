@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { Link } from "react-router-dom"; 
 
 
 const Events = () => {
@@ -44,7 +44,7 @@ const Events = () => {
             </div>
            
             <div class="col-auto">
-              <Link to="./edit"> 
+              <Link to="/edit"> 
               <img src="assets/edit.svg" alt="edit" />            
               </Link>
             </div>
@@ -64,7 +64,9 @@ const Events = () => {
                Instagram Post 
             </div>
             <div class="col-auto">
-              <img src="assets/edit.svg" alt="edit" />
+              <Link to="/edit"> 
+              <img src="assets/edit.svg" alt="edit" />            
+              </Link>
             </div>
           </div>
         </div>
@@ -82,7 +84,9 @@ const Events = () => {
               Instagram Post 
             </div>
             <div class="col-auto">
-              <img src="assets/edit.svg" alt="edit" />
+              <Link to="/edit"> 
+              <img src="assets/edit.svg" alt="edit" />            
+              </Link>
             </div>
           </div>
         </div>

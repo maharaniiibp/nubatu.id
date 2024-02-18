@@ -1,0 +1,26 @@
+
+  .halo {
+    font-size: 10px;
+
+  }
+  @media only screen and (max-width: 768px) {
+    /* Gayakan CSS khusus untuk layar dengan lebar maksimum 768px (tablet dan mobile) */
+    .dua {
+      padding: 10px; /* Atur padding agar lebih kecil di perangkat seluler */
+    }
+    .ziyad {
+        font-size: 8px;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    /* Gayakan CSS khusus untuk layar dengan lebar maksimum 576px (mobile) */
+    .dua {
+      font-size: 14px; /* Atur ukuran font lebih kecil di perangkat seluler */
+    }
+    .ziyad {
+        font-size: 8px;
+    }
+  }
+  
+  
