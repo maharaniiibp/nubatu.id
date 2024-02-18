@@ -6,6 +6,9 @@ import { Button, Modal, Col, Row } from "react-bootstrap";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageIcon from "@mui/icons-material/Language";
 
+
+import InformasiUmum from "./koin nusantara/Campaign Program/InformasiUmum";
+
 const Navbar = () => {
   const location = useLocation();
   const pathname = location.pathname;
@@ -262,7 +265,7 @@ const Navbar = () => {
                               <input type="checkbox" className="checkbox" />
                               <label>Ditolak</label>
                             </div>
-                            {/* <img src="./koinNusantara/checklist.svg" alt="" className="checked"/> */}
+                            
                           </div>
                         </div>
                         <div className="isiKanan pemberitahuanContainer">
@@ -279,7 +282,7 @@ const Navbar = () => {
                           </p>
                         </div>
 
-                        {/* button  */}
+                        button 
                         <div className="buttonContainer">
                           <button className="back" onClick={handleClose}>
                             <img src="./koinNusantara/back.svg" alt="" />
@@ -291,7 +294,8 @@ const Navbar = () => {
                         </div>
                       </Col>
                     </Row>
-                  </Modal.Body>
+        </Modal.Body>
+        
                 </Modal>
     </>
   );

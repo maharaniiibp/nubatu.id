@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import "../../css/koinNusantara/navAddProgram.css";
 import { useLocation, Link } from "react-router-dom";
 import InformasiUmum from "./InformasiUmum"
-import FotoDetail from "./FotoDetail"
+import FotoDetail from "../../coba.jsx"
+// import FotoDetail from "./FotoDetail"
 
 const NavAddProgram = () => {
     const [activeTab, setActiveTab] = useState("InformasiUmum"); // Default tab
@@ -13,6 +14,7 @@ const NavAddProgram = () => {
                 return <InformasiUmum />;
             case "FotoDetail":
                 return <FotoDetail />;
+                // return <FotoDetail />;
             default:
                 return <InformasiUmum />;
         }

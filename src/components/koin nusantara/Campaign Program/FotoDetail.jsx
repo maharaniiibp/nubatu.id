@@ -113,7 +113,9 @@ const FotoDetail = () => {
             multiple
             ref={fileInputRef}
             onChange={onFileSelect}
-          ></input>
+            >
+              
+          </input>
           </div>
 
           <div className="container">
