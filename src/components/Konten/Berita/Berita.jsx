@@ -89,6 +89,8 @@ const Berita = ({ data }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  
   return (
     <>
       <div className="berita">

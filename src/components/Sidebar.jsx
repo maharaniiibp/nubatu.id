@@ -63,22 +63,7 @@ function SidebarCobaLagi({ children }) {
           name: "Event",
           icon: <img src="./sidebar/dot.svg" alt="icon" />,
         },
-        {
-          path: "/ads",
-          name: "Partnership/Ads",
-          icon: <img src="./sidebar/dot.svg" alt="icon" />,
-        },
       ],
-    },
-    {
-      path: "/anggota",
-      name: "anggota",
-      icon: <img src="./sidebar/profile-2user.svg" alt="icon" />,
-    },
-    {
-      path: "/pengurus",
-      name: "pengurus",
-      icon: <img src="./sidebar/people.svg" alt="icon" />,
     },
     {
       path: "/pengaturan",
@@ -89,7 +74,7 @@ function SidebarCobaLagi({ children }) {
   return (
     <>
       <div className="containerSidebarCobaLagi">
-        <div style={{ width: isOpen ? "250px" : "80px" }} className="sidebar">
+        <div style={{ maxWidth: isOpen ? "250px" : "70px" }} className="sidebar">
           <div
             style={{
               display: "flex",

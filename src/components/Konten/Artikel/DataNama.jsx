@@ -1,9 +1,10 @@
 import React from 'react'
 // import dataTable from "../../../data/campaign.json";
-import "../../css/koinNusantara/dataNama.css";
+import "../../css/konten/srtikel.css";
 
-const DataNama = ({ item }) => {
-    return (
+const DataNama = ({item}) => {
+  return (
+      <>
       <div className="dataNamaContainer">
         <img src={item.photo} alt="" className="fotoNama" />
         <div className="description">
@@ -28,7 +29,8 @@ const DataNama = ({ item }) => {
           </div>
         </div>
       </div>
-    );
-  };
+      </>
+  )
+}
 
 export default DataNama

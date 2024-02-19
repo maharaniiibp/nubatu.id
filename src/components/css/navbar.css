@@ -1,9 +1,242 @@
 /* SMALL */
 @media (min-width: 320px) {
-}
+  .navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    background-color: #edf6f0;
+    margin-bottom: 10px;
+    height: fit-content;
 
-/* MEDIUM  */
+    .koinNav {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+
+      .navKiri {
+        margin-bottom: 5px;
+        max-width: 375px;
+        p {
+          font-size: 30px;
+        }
+      }
+
+      .navKanan {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .addProgram {
+          padding: 12px 8px;
+          background-color: #078d41;
+          color: white;
+          font-size: 11px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+          border: none;
+          white-space: nowrap;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+
+        .account {
+          height: 100%;
+          .photo {
+            height: 45px;
+            border-radius: 50px;
+            border: 3px solid #009b4c;
+          }
+        }
+      }
+    }
+
+    .addProgramNav {
+      width: 100%;
+
+      .navKiri {
+        margin-bottom: 20px;
+        .pageName {
+          display: flex;
+          align-items: center;
+
+          .kembali {
+            font-size: 14px;
+            border: none;
+            background: transparent;
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .navKanan {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .simpanPengajuan {
+          background-color: transparent;
+          padding: 12px;
+          border: 1px solid #bfbfbf;
+          color: black;
+          font-size: 13px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+        }
+
+        .verifikasiProgram {
+          padding: 12px;
+          background-color: #078d41;
+          color: white;
+          font-size: 14px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+          border: none;
+        }
+      }
+    }
+
+  }
+
+  .navKiri {
+    .pageName {
+      span: 16px;
+      gap: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .arrowLeft {
+      width: 24px;
+    }
+  }
+
+  /* .fotoPratinjau {
+    height: 169px;
+    width: 100%;
+  } */
+
+  
+
+/* TABLET  */
 @media (min-width: 767px) {
+  .navbar {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    background-color: #edf6f0;
+    margin-bottom: 20px;
+    padding: 20px 0;
+
+    .koinNav {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+
+      .navKanan {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .addProgram {
+          padding: 12px;
+          background-color: #078d41;
+          color: white;
+          font-size: 14px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+          border: none;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+
+        .account {
+          height: 100%;
+          .photo {
+            height: 45px;
+            border-radius: 50px;
+            border: 3px solid #009b4c;
+          }
+        }
+      }
+    }
+
+    .addProgramNav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .navKiri {
+        margin: 0;
+
+        button {
+          background: yellow;
+        }
+        .pageName {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .navKanan {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .simpanPengajuan {
+          background-color: transparent;
+          padding: 12px;
+          border: 1px solid #bfbfbf;
+          color: black;
+          font-size: 13px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+        }
+
+        .verifikasiProgram {
+          padding: 12px;
+          background-color: #078d41;
+          color: white;
+          font-size: 14px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .navKiri {
+    .pageName {
+      span: 16px;
+      gap: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .arrowLeft {
+      width: 24px;
+    }
+  }
+
+ 
 }
 
 /* LAPTOP */
@@ -14,123 +247,93 @@
     align-items: center;
     font-size: 14px;
     color: #333;
-    background-color: #EDF6F0;
+    background-color: #edf6f0;
     margin-bottom: 20px;
     padding: 20px 0;
-  
-    /* .navbarContainer { */
-      /* display: flex;
-      width: 100%;
-      align-items: center;
-      justify-content: space-between; */
-      
-  .koinNav {
-    /* background: red; */
-    display: flex;
+
+    .koinNav {
+      display: flex;
       width: 100%;
       align-items: center;
       justify-content: space-between;
 
-    .navKanan {
-      display: flex;
-      align-items: center;
-      /* gap: 24px; */
-      gap: 12px;
-      
-      .addProgram {
-        /* padding: 12px 12px;
-        font-size: 14px; */
-        padding: 8px;
-        background-color: #078d41;
-        color: white;
-        font-size: 14px;
-        font-weight: semi-bold;
-        border-radius: 10px;
-        border: none;
+      .navKanan {
+        display: flex;
+        align-items: center;
+        gap: 12px;
 
-        img {
-          width: 17px;
-          height: 17px;
+        .addProgram {
+          padding: 12px;
+          background-color: #078d41;
+          color: white;
+          font-size: 14px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+          border: none;
+
+          img {
+            width: 17px;
+            height: 17px;
+          }
+        }
+
+        .account {
+          height: 100%;
+          .photo {
+            height: 45px;
+            border-radius: 50px;
+            border: 3px solid #009b4c;
+          }
         }
       }
-      
-      .account {
-        /* background: yellow; */
-        height: 100%;
-        .photo {
-          /* width: 56px; */
-          height: 45px;
-          border-radius: 50px;
-          border: 3px solid #009b4c;
+    }
+
+    .addProgramNav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .navKiri {
+        margin: 0;
+
+        button {
+          background: yellow;
+        }
+        .pageName {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .navKanan {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .simpanPengajuan {
+          background-color: transparent;
+          padding: 12px;
+          border: 1px solid #bfbfbf;
+          color: black;
+          font-size: 13px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+        }
+
+        .verifikasiProgram {
+          padding: 12px;
+          background-color: #078d41;
+          color: white;
+          font-size: 14px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+          border: none;
         }
       }
     }
   }
-      .navKanan {
-        display: flex;
-        align-items: center;
-        /* gap: 24px; */
-        gap: 12px;
-        
-      }
-  
-      .pageName p {
-        font-size: 24px;
-        font-weight: bold;
-        text-transform: capitalize;
-        margin: 0;
-      }
-  
-      /* .photo {
-        width: 56px;
-        height: 56px;
-        border-radius: 50px;
-        border: 3px solid #009b4c;
-      } */
-  
-      .navKiri {
-        .pageName {
-          display: flex;
-          align-items: center;
-          
-    
-          .kembali {
-            font-size: 14px;
-            border: none;
-            background: transparent;
-          }
-    
-          img {
-            width: 20px;
-            height: 20px;
-            
-          }
-        }
-      }
-    /* } */
-  }
 
-  
-  .simpanPengajuan {
-    background-color: transparent;
-    padding: 8px;
-    border: 1px solid #bfbfbf;
-    color: black;
-    font-size: 14px;
-    font-weight: semi-bold;
-    border-radius: 10px;
-  }
-  
-  .verifikasiProgram {
-    padding: 8px;
-    background-color: #078d41;
-    color: white;
-    font-size: 14px;
-    font-weight: semi-bold;
-    border-radius: 10px;
-    border: none;
-  }
-  
   .navKiri {
     .pageName {
       span: 16px;
@@ -138,210 +341,15 @@
       display: flex;
       align-items: center;
     }
-  
+
     .arrowLeft {
       width: 24px;
     }
   }
+
   
-  /* .fotoPratinjau {
-    height: 169px;
-    width: 100%;
-  } */
-  
-  .modal-header {
-    border: none !important;
-  }
-  .modal-body {
-    border: none;
-  }
-  
-  .modal-content {
-    padding: 40px;
-    /* width: 800px !important; */
-  }
-  
-  .modal-body {
-    /* background: lightblue; */
-    padding: 0;
-    margin: 0;
-    /* gap: 20px; */
-    .modalContainer {
-      gap: 30px;
-  
-      .col {
-        /* background: blue; */
-      }
-    }
-  
-    .kanan {
-      /* background: lightgreen; */
-      margin: 0;
-      padding: 0;
-  
-      .isiKanan {
-        margin-bottom: 30px;
-  
-        .dana {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-  
-          .Rp {
-            width: 32px;
-            height: 32px;
-            background: #009b4c;
-            border-radius: 5px;
-            padding: 8px;
-  
-            span {
-              margin: 0;
-              padding: 0;
-              color: white;
-              justify-content: center;
-              display: flex;
-              align-items: center;
-              font-size: 12px;
-              font-weight: semi-bold;
-              line-height: 16px;
-              letter-spacing: -0.24px;
-            }
-          }
-  
-          p {
-            padding: 0;
-            margin: 0;
-          }
-        }
-  
-        .inisiatorProf {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-  
-          img {
-            width: 40px;
-            border-radius: 50px;
-          }
-  
-          p {
-            font-size: 16px;
-            line-height: 140%;
-            letter-spacing: -0.24px;
-            color: #808080;
-            font-weight: semi-bold;
-            margin: 0;
-          }
-        }
-      }
-    }
-    .kiri {
-      /* background: green; */
-      margin: 0;
-      padding: 0;
-    }
-  
-    .fotoPratinjau {
-      width: 260px;
-      border-radius: 10px;
-    }
-  
-    h5 {
-      font-size: 16px;
-      letter-spacing: -0.24px;
-      color: black;
-      font-weight: semi-bold;
-    }
-    p {
-      font-size: 16px;
-      letter-spacing: -0.24px;
-      color: #808080;
-    }
-  
-    .deskripsi {
-      font-size: 14px;
-      letter-spacing: -0.24px;
-      color: black;
-    }
-  }
-  
-  .checkboxContainer {
-    display: flex;
-    gap: 36px;
-  
-    .checkbox {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-  
-      /* input[type="checkbox"]{
-        appearance: none;
-        -webkit-appearance: none;
-        border: 1px solid #D0D5DD !important;
-        width: 16px;
-        height: 16px;
-        border-radius: 4px;
-        cursor: pointer;
-        justify-content: center;
-  
-        &:after {
-          content: url('/koinNusantara/checklist.svg');
-          content: "\f00c";
-          background-image: url("/koinNusantara/checklist.svg");
-          font-weight: 900;
-          font-size: 50px;
-          color: green;
-          display: inline-block;
-        }
-      } */
-    }
-  }
-  .pemberitahuanContainer {
-    margin-bottom: 50px;
-  }
-  
-  .pemberitahuan {
-    color: black;
-  }
-  
-  .buttonContainer {
-    display: flex;
-    justify-content: space-between;
-  
-    .back {
-      padding: 15px;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      color: black;
-      /* background-color: transparent; */
-      background-color: transparent;
-      font-size: 14px;
-      gap: 8px;
-      border-radius: 10px;
-      border: 1px solid #bfbfbf;
-  
-      &:hover {
-        font-weight: bold;
-        border: 1px solid black;
-      }
-    }
-  
-    .setuju {
-      padding: 15px;
-      margin: 0;
-      border: none;
-      border-radius: 10px;
-      background: #078d41;
-      color: white;
-      font-size: 14px;
-      font-weight: semi-bold;
-  
-      &:hover {
-        background: lightgreen;
-      }
-    }
-  }
+
+ 
 }
 
 /* LAPTOP L*/
@@ -352,8 +360,8 @@
     align-items: center;
     font-size: 14px;
     color: #333;
-    background-color: #EDF6F0;
-  
+    background-color: #edf6f0;
+
     .navbarContainer {
       /* border: 1px solid red; */
       display: flex;
@@ -361,57 +369,52 @@
       align-items: center;
       justify-content: space-between;
       /* padding: 0 40px; */
-      
-  
+
       .navKanan {
         display: flex;
         align-items: center;
         gap: 24px;
-        
       }
-  
+
       .pageName p {
         font-size: 36px;
         font-weight: bold;
         text-transform: capitalize;
         margin: 0;
       }
-  
+
       .photo {
         width: 56px;
         height: 56px;
         border-radius: 50px;
         border: 3px solid #009b4c;
       }
-  
+
       .navKiri {
         .pageName {
           display: flex;
           align-items: center;
-          
-    
+
           .kembali {
             font-size: 16px;
             border: none;
             background: transparent;
           }
-    
+
           img {
             width: 20px;
             height: 20px;
-            
           }
         }
       }
     }
   }
 
-  
   .simpanPengajuan {
     /* ASLI  */
     background-color: transparent;
     padding: 15px;
-    border: 1px solid #BFBFBF;
+    border: 1px solid #bfbfbf;
     color: black;
     font-size: 16px;
     font-weight: semi-bold;
@@ -425,7 +428,7 @@
     font-weight: semi-bold;
     border-radius: 10px; */
   }
-  
+
   .verifikasiProgram {
     /* ASLI  */
     padding: 15px;
@@ -444,7 +447,7 @@
     border-radius: 10px;
     border: none; */
   }
-  
+
   .navKiri {
     .pageName {
       span: 16px;
@@ -452,208 +455,16 @@
       display: flex;
       align-items: center;
     }
-  
+
     .arrowLeft {
       width: 24px;
     }
   }
-  
+
   /* .fotoPratinjau {
     height: 169px;
     width: 100%;
   } */
-  
-  .modal-header {
-    border: none !important;
-  }
-  .modal-body {
-    border: none;
-  }
-  
-  .modal-content {
-    padding: 40px;
-    /* width: 800px !important; */
-  }
-  
-  .modal-body {
-    /* background: lightblue; */
-    padding: 0;
-    margin: 0;
-    /* gap: 20px; */
-    .modalContainer {
-      gap: 30px;
-  
-      .col {
-        /* background: blue; */
-      }
-    }
-  
-    .kanan {
-      /* background: lightgreen; */
-      margin: 0;
-      padding: 0;
-  
-      .isiKanan {
-        margin-bottom: 30px;
-  
-        .dana {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-  
-          .Rp {
-            width: 32px;
-            height: 32px;
-            background: #009b4c;
-            border-radius: 5px;
-            padding: 8px;
-  
-            span {
-              margin: 0;
-              padding: 0;
-              color: white;
-              justify-content: center;
-              display: flex;
-              align-items: center;
-              font-size: 12px;
-              font-weight: semi-bold;
-              line-height: 16px;
-              letter-spacing: -0.24px;
-            }
-          }
-  
-          p {
-            padding: 0;
-            margin: 0;
-          }
-        }
-  
-        .inisiatorProf {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-  
-          img {
-            width: 40px;
-            border-radius: 50px;
-          }
-  
-          p {
-            font-size: 16px;
-            line-height: 140%;
-            letter-spacing: -0.24px;
-            color: #808080;
-            font-weight: semi-bold;
-            margin: 0;
-          }
-        }
-      }
-    }
-    .kiri {
-      /* background: green; */
-      margin: 0;
-      padding: 0;
-    }
-  
-    .fotoPratinjau {
-      width: 260px;
-      border-radius: 10px;
-    }
-  
-    h5 {
-      font-size: 16px;
-      letter-spacing: -0.24px;
-      color: black;
-      font-weight: semi-bold;
-    }
-    p {
-      font-size: 16px;
-      letter-spacing: -0.24px;
-      color: #808080;
-    }
-  
-    .deskripsi {
-      font-size: 14px;
-      letter-spacing: -0.24px;
-      color: black;
-    }
-  }
-  
-  .checkboxContainer {
-    display: flex;
-    gap: 36px;
-  
-    .checkbox {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-  
-      /* input[type="checkbox"]{
-        appearance: none;
-        -webkit-appearance: none;
-        border: 1px solid #D0D5DD !important;
-        width: 16px;
-        height: 16px;
-        border-radius: 4px;
-        cursor: pointer;
-        justify-content: center;
-  
-        &:after {
-          content: url('/koinNusantara/checklist.svg');
-          content: "\f00c";
-          background-image: url("/koinNusantara/checklist.svg");
-          font-weight: 900;
-          font-size: 50px;
-          color: green;
-          display: inline-block;
-        }
-      } */
-    }
-  }
-  .pemberitahuanContainer {
-    margin-bottom: 50px;
-  }
-  
-  .pemberitahuan {
-    color: black;
-  }
-  
-  .buttonContainer {
-    display: flex;
-    justify-content: space-between;
-  
-    .back {
-      padding: 15px;
-      margin: 0;
-      display: flex;
-      align-items: center;
-      color: black;
-      /* background-color: transparent; */
-      background-color: transparent;
-      font-size: 14px;
-      gap: 8px;
-      border-radius: 10px;
-      border: 1px solid #bfbfbf;
-  
-      &:hover {
-        font-weight: bold;
-        border: 1px solid black;
-      }
-    }
-  
-    .setuju {
-      padding: 15px;
-      margin: 0;
-      border: none;
-      border-radius: 10px;
-      background: #078d41;
-      color: white;
-      font-size: 14px;
-      font-weight: semi-bold;
-  
-      &:hover {
-        background: lightgreen;
-      }
-    }
-  }
+
+}
 }

@@ -1,8 +1,8 @@
-.berita {
+.artikel {
   /* padding: 0 40px; */
   background-color: #edf6f0;
 
-  .beritaContainer {
+  .artikelContainer {
     width: 100%;
     flex: 6;
 

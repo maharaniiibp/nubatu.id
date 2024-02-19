@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
-import "../../css/koinNusantara/addProgram.css";
-import { Row, Col } from "react-bootstrap";
+import "../../css/koinNusantara/informasiUmum.css";
+import { Row, Col, Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const InformasiUmum = () => {
   const [files, setFiles] = useState(null);
@@ -13,164 +14,489 @@ const InformasiUmum = () => {
     setFiles(event.dataTransfer.files);
   };
 
-    const handleUpload = () => { };
-    
+  const handleUpload = () => {};
 
-    // =====================
-    const [image, setImage] = useState(null);
+  // =====================
+  const [image, setImage] = useState(null);
   const [fileName, setFileName] = useState("No selected file");
-  
 
-  // HOVER 
+  // HOVER
   const [isHovered, setIsHovered] = useState(false);
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
-  
+
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-  
+
+  // ==============
+  const [images, setImages] = useState([]);
+  const [isDragging, setIsDragging] = useState(false);
+  const fileInputRef = useRef(null);
+
+  function selectFiles() {
+    fileInputRef.current.click();
+  }
+  function onFileSelect(event) {
+    const files = event.target.files;
+    if (files.length === 0) return;
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].type.split("/")[0] !== "image") continue;
+      if (!images.some((e) => e.name === files[i].name)) {
+        setImages((prevImages) => [
+          ...prevImages,
+          {
+            nama: files[i].name,
+            url: URL.createObjectURL(files[i]),
+          },
+        ]);
+      }
+    }
+  }
+
+  function deleteImage(index) {
+    setImages((prevImages) => prevImages.filter((_, i) => i !== index));
+  }
+
+  function onDragOver(event) {
+    event.preventDefault();
+    setIsDragging(true);
+    event.dataTransfer.dropEffect = "copy";
+  }
+  function onDragLeave(event) {
+    event.preventDefault();
+    setIsDragging(false);
+  }
+  function onDrop(event) {
+    event.preventDefault();
+    setIsDragging(false);
+    const files = event.dataTransfer.files;
+    if (files.length === 0) return;
+    for (let i = 0; i < files.length; i++) {
+      if (files[i].type.split("/")[0] !== "image") continue;
+      if (!images.some((e) => e.name === files[i].name)) {
+        setImages((prevImages) => [
+          ...prevImages,
+          {
+            nama: files[i].name,
+            url: URL.createObjectURL(files[i]),
+          },
+        ]);
+      }
+    }
+  }
+
+  function uploadImages() {
+    console.log("image", images);
+  }
+
+  // =========== FORM HANDLE TERBARU 18/FEB/2024 (13:58)
+  // Di dalam komponen InformasiUmum
+
+  const [formData, setFormData] = useState({
+    programName: "",
+    description: "",
+    requestedFunds: "",
+    file: "",
+  });
+
+  // Fungsi untuk menangani perubahan input dalam formulir
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Fungsi untuk menangani pengiriman formulir
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Di sini Anda dapat menambahkan logika untuk menangani pengiriman formulir,
+    // seperti mengirim data ke server atau menampilkan data ke konsol.
+    console.log("Form data:", formData);
+  };
+
+  const [showResult, setShowResult] = useState(false);
+
+  // Fungsi untuk menampilkan hasil input
+  const displayResult = () => {
+    setShowResult(true);
+  };
+
+  // MODAL
+  // INI BUAT MODAL PENGAJUAN
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+  // buat verfikasi 
+  const [isFormFilled, setIsFormFilled] = useState(false);
+
+  // Fungsi untuk memeriksa apakah semua form telah diisi
+  const checkFormFilled = () => {
+    // Memeriksa apakah semua nilai dalam formData tidak kosong
+    if (formData.programName && formData.description && formData.requestedFunds && formData.file) {
+      setIsFormFilled(true);
+    } else {
+      setIsFormFilled(false);
+    }
+  };
+
   return (
     <>
-      <div className="addProgram">
-        <Row>
-          <Col className="kiri">
-            <h3>Detail program</h3>
-            <div className="isi">
-              <div className="top">
-                <label>Nama Program</label>
-                <input placeholder="Nama Program" type="text" />
-                <label>Deskripsi</label>
-                <textarea
-                  placeholder="E.g Deskripsi detail"
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                ></textarea>
-              </div>
-              <div className="bottom">
-                <h3>Dana yang diajukan</h3>
-                <div className="inputDana">
-                  <div className="rpIcon">
-                    <span> Rp</span>
-                  </div>
-                  <input placeholder="0" type="text" />
-                </div>
-              </div>
-              <tr></tr>
+      <div className="informasiUmum">
+        <div className="nav">
+          <div className="navKiri">
+            <div className="pageName">
+              <img
+                className="arrowLeft"
+                src="./sidebar/arrow-left.svg"
+                alt=""
+              />
+              <Link to="./koin">
+                <button className="kembali">Kembali</button>
+              </Link>
             </div>
-                  </Col>
-                  
+          </div>
 
-          <Col className="kanan">
-            <h3>Gambar sampul</h3>
-                      <div className="top">
-                          
+          <div className="navKanan">
+            <Link to="">
+              <button className="simpanPengajuan">Simpan Pengajuan</button>
+            </Link>
+            <button
+              className="verifikasiProgram"
+              onClick={handleShow}
+              // onClick={handleVerification}
+        disabled={!isFormFilled} // Tombol akan dinonaktifkan jika form belum diisi
+            >
+              Verifikasi Program
+            </button>
+          </div>
+        </div>
 
-
-              
-              {!files && (
-                <div
-                  className="dropzone"
-                  onDragOver={handleDragOver}
-                  onDrop={handleDrop}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div>
-                    <div className="imgContainer">
-                      <img src="./koinNusantara/gallery.svg" alt="" />
+        <form onSubmit={handleSubmit}>
+          <Row>
+            <Col className="kiri">
+              <h3>Detail program</h3>
+              <div className="isi">
+                <div className="top">
+                  <label>Nama Program</label>
+                  <input
+                    placeholder="Nama Program"
+                    type="text"
+                    name="programName"
+                    value={formData.programName}
+                    onChange={handleInputChange}
+                    onBlur={checkFormFilled} // Memeriksa apakah form telah diisi setelah input berubah
+                  />
+                  <label>Deskripsi</label>
+                  <textarea
+                    placeholder="E.g Deskripsi detail"
+                    // name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    name="description"
+                    value={formData.description}
+                    onChange={handleInputChange}
+                    onBlur={checkFormFilled} // Memeriksa apakah form telah diisi setelah input berubah
+                    // cols="30"
+                    // rows="10"
+                  ></textarea>
+                </div>
+                <div className="bottom">
+                  <p className="dana">Dana yang diajukan</p>
+                  <div className="inputDana">
+                    <div className="rpIcon">
+                      <span> Rp</span>
                     </div>
-
-                    <h1>
-                      Drag & drop image to upload, or{" "}
-                      <span onClick={() => inputRef.current.click()}>
-                        browse
-                      </span>{" "}
-                    </h1>
-                    <p>
-                      800x600px size required in PNG or
-                      <br />
-                      JPG format only.
-                    </p>
-
                     <input
-                      type="file"
-                      multiple
-                      onChange={(event) => setFiles(event.target.files)}
-                      hidden
-                      ref={inputRef}
+                      placeholder="0"
+                      type="text"
+                      name="requestedFunds"
+                      value={formData.requestedFunds}
+                      onChange={handleInputChange}
+                      onBlur={checkFormFilled} // Memeriksa apakah form telah diisi setelah input berubah
                     />
                   </div>
-                  {files && isHovered && (
-    <div className="uploads">
-      <div className="actions">
-        <button onClick={() => setFiles(null)}>Cancel</button>
-        <button onClick={handleUpload}>Upload</button>
-      </div>
-    </div>
-  )}
                 </div>
-                
-              )}
+                {/* <tr></tr> */}
+              </div>
+            </Col>
 
-              {/* ============================ */}
+            <Col className="kanan">
+              <h3>Gambar sampul</h3>
+              <div className="top">
+                <div
+                  className="dragArea"
+                  onDragOver={onDragOver}
+                  onDragLeave={onDragLeave}
+                  onDrop={onDrop}
+                >
+                  {isDragging ? (
+                    <span>apa ini?</span>
+                  ) : (
+                    <div className="placeholderDrop">
+                      <div className="imgContainer">
+                        <img src="./koinNusantara/gallery.svg" alt="" />
+                      </div>
+                      <h1 className="dragText">
+                        {" "}
+                        Drag & drop image to upload, or browse {""}
+                        <span
+                          className="browse"
+                          role="button"
+                          onClick={selectFiles}
+                        >
+                          browse
+                        </span>
+                      </h1>
+                      <p>
+                        1208x840px size required in PNG or JPG format only,
+                        maximum 5MB.
+                      </p>
+                    </div>
+                  )}
 
-              {files && (
-                <div className="selectedImages">
-                  {Array.from(files).map((file, idx) => (
-                    <div key={idx} className="imagePreview">
-                      <img src={URL.createObjectURL(file)} alt={file.name} />
-                      {/* <p>{file.name}</p> */}
+                  <input
+                    type="file"
+                    name="file"
+                    className="file"
+                    multiple
+                    ref={fileInputRef}
+                    value={formData.file}
+                    onChange={(event) => {
+                      onFileSelect(event);
+                      handleInputChange(event);
+                      checkFormFilled();
+                    }}
+                  ></input>
+                </div>
+
+                <div className="container">
+                  {images.map((images, index) => (
+                    <div className="image" key={index}>
+                      <span
+                        className="delete"
+                        onClick={() => deleteImage(index)}
+                      >
+                        &times;
+                      </span>
+                      <img src={images.url} alt={images.name} />
                     </div>
                   ))}
                 </div>
-              )}
-                      </div>
-                      
-                      {/* ====================== */}
-                      {/* <form action=""
-                      onClick={() => document.querySelector(".input-field").click()}>
-                          <input type="file" accept="image/*" className="input-field" hidden
-                              onChange={({ target: { files } }) => {
-                                  files[0] && setFileName(files[0].name)
-                                  if (files) {
-                                      setImage(URL.createObjectURL(files[0]))
-                                  }
-                          }} />
-                          {image ? 
-                              <img src={image} width={150} height={150} alt={fileName} /> : "ayo upload"   }
-                      </form> */}
-
-{files && (
-                <div className="uploads">
-                  <div className="actions">
-                    <button onClick={() => setFiles(null)}>Cancel</button>
-                    <button onClick={handleUpload}>Upload</button>
-                  </div>
-                </div>
-              )}  
-{/* {files && (
-                <div className="uploads">
-                  <div className="actions">
-                    <button onClick={() => setFiles(null)}>Cancel</button>
-                    <button onClick={handleUpload}>Upload</button>
-                  </div>
-                </div>
-              )}   */}
-
-                      {/* =================== */}
-            <div className="bottom">
-              <h3>Inisiator</h3>
-              <div className="inisiatorProf">
-                <img src="./sidebar/profil.svg" alt="" />
-                <p>Administrator</p>
               </div>
-            </div>
-          </Col>
-        </Row>
+              {/* =================== */}
+              <div className="bottom">
+                <p className="inisiator">Inisiator</p>
+                <div className="inisiatorProf">
+                  <img src="./sidebar/profil.svg" alt="" />
+                  <p className="administrator">Administrator</p>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </form>
+
+        <Modal
+          // show={show}
+          size="lg"
+          // onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header>
+            <Modal.Title>Verifikasi Program</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Row className="modalContainer">
+              <Col className="kiri">
+                <h5>Sampul pratinjau</h5>
+                {/* {images.map((images, index) => (
+              <div className="image" key={index}>
+                <p>
+                  <img src={images.url} alt={images.name} />
+                </p>
+              </div>
+            ))} */}
+                <img
+                  className="fotoPratinjau"
+                  src="./koinNusantara/payung.svg"
+                  alt=""
+                />
+              </Col>
+              <Col xs={7} className="kanan">
+                <div className="isiKanan">
+                  <h5>Judul</h5>
+                  <p>{formData.programName}</p>
+                </div>
+                <div className="isiKanan">
+                  <h5 className="deskripsi">Deskripsi</h5>
+                  <p>{formData.description}</p>
+                </div>
+                <div>
+                  <Row className="isiKanan">
+                    <Col>
+                      <h5>Dana yang diajukan</h5>
+                      <div className="dana">
+                        <div className="Rp">
+                          {" "}
+                          <span>Rp</span>{" "}
+                        </div>
+                        <p>{formData.requestedFunds}</p>
+                      </div>
+                    </Col>
+                    <Col>
+                      <h5>Dana yang diajukan</h5>
+                      <div className="inisiatorProf">
+                        <img src="./sidebar/profil.svg" alt="" />
+                        <p>Administratorr</p>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
+                <div className="isiKanan">
+                  <h5>Persetujuan Program</h5>
+                  <div className="checkboxContainer">
+                    <div className="checkbox">
+                      <input type="checkbox" className="" />
+                      <label>Diterima</label>
+                    </div>
+                    <div className="checkbox">
+                      <input type="checkbox" className="checkbox" />
+                      <label>Ditolak</label>
+                    </div>
+                  </div>
+                </div>
+                <div className="isiKanan pemberitahuanContainer">
+                  <p>
+                    {" "}
+                    <span className="pemberitahuan fw-bold ">
+                      {" "}
+                      Pemberitahuan:{" "}
+                    </span>{" "}
+                    Anda wajib melakukan checklist pada persetujuan untuk
+                    mengubah status pengajuan program pada dashboard. Ingat!,
+                    persetujuan ini permanen dan tidak dapat diubah.
+                  </p>
+                </div>
+                button
+                <div className="buttonContainer">
+                  <button className="back" onClick={handleClose}>
+                    <img src="./koinNusantara/back.svg" alt="" />
+                    Kembali
+                  </button>
+                  <button className="setuju" onClick={handleClose}>
+                    Saya setuju
+                  </button>
+                </div>
+              </Col>
+            </Row>
+          </Modal.Body>
+        </Modal>
+
+        {/* =======MODAL BARU ======== */}
+        <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+          keyboard={false}
+          className="custom-modal"
+      >
+    <Modal.Header>
+            <Modal.Title>Verifikasi Program</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Row className="modalContainer">
+              <Col className="kiri">
+                <h5>Sampul pratinjau</h5>
+                {/* {images.map((images, index) => (
+              <div className="image" key={index}>
+                <p>
+                  <img src={images.url} alt={images.name} />
+                </p>
+              </div>
+            ))} */}
+                <img
+                  className="fotoPratinjau"
+                  src="./koinNusantara/payung.svg"
+                  alt=""
+                />
+              </Col>
+              <Col className="kanan">
+                <div className="isiKanan">
+                  <h5>Judul</h5>
+                  <p>{formData.programName}</p>
+                </div>
+                <div className="isiKanan">
+                  <h5 className="deskripsi">Deskripsi</h5>
+                  <p>{formData.description}</p>
+                </div>
+                <div>
+                  <Row className="isiKanan">
+                    <Col>
+                      <h5>Dana yang diajukan</h5>
+                      <div className="dana">
+                        <div className="Rp">
+                          {" "}
+                          <span>Rp</span>{" "}
+                        </div>
+                        {/* <p>{formData.requestedFunds}</p> */}
+                        <p>{formData.requestedFunds ? formData.requestedFunds : '-'}</p>
+                      </div>
+                    </Col>
+                    <Col>
+                      <h5>Dana yang diajukan</h5>
+                      <div className="inisiatorProf">
+                        <img src="./sidebar/profil.svg" alt="" />
+                        <p>Administrator</p>
+                      </div>
+                    </Col>
+                  </Row>
+                </div>
+                <div className="isiKanan">
+                  <h5>Persetujuan Program</h5>
+                  <div className="checkboxContainer">
+                    <div className="checkbox">
+                      <input type="checkbox" className="" />
+                      <label>Diterima</label>
+                    </div>
+                    <div className="checkbox">
+                      <input type="checkbox" className="checkbox" />
+                      <label>Ditolak</label>
+                    </div>
+                  </div>
+                </div>
+                <div className="isiKanan pemberitahuanContainer">
+                  <p>
+                    {" "}
+                    <span className="pemberitahuan fw-bold ">
+                      {" "}
+                      Pemberitahuan:{" "}
+                    </span>{" "}
+                    Anda wajib melakukan checklist pada persetujuan untuk
+                    mengubah status pengajuan program pada dashboard. Ingat!,
+                    persetujuan ini permanen dan tidak dapat diubah.
+                  </p>
+                </div>
+                <div className="buttonContainer">
+                  <button className="back" onClick={handleClose}>
+                    <img src="./koinNusantara/back.svg" alt="" />
+                    Kembali
+                  </button>
+                  <button className="setuju" onClick={handleClose}>
+                    Saya setuju
+                  </button>
+                </div>
+              </Col>
+            </Row>
+          </Modal.Body>
+      </Modal>
       </div>
     </>
   );

@@ -114,7 +114,7 @@
 }
 
 /* CSS MODAL  */
-.modal {
+/* .modal {
   .modal-dialog {
     padding: 40px;
     background: white;
@@ -249,7 +249,6 @@
       display: flex;
       align-items: center;
       color: black;
-      /* background-color: transparent; */
       background-color: transparent;
       font-size: 14px;
       gap: 8px;
@@ -264,4 +263,4 @@
   }
 }
 }
-}
+} */
