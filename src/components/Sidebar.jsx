@@ -63,22 +63,7 @@ function SidebarCobaLagi({ children }) {
           name: "Event",
           icon: <img src="./sidebar/dot.svg" alt="icon" />,
         },
-        {
-          path: "/ads",
-          name: "Partnership/Ads",
-          icon: <img src="./sidebar/dot.svg" alt="icon" />,
-        },
       ],
-    },
-    {
-      path: "/anggota",
-      name: "anggota",
-      icon: <img src="./sidebar/profile-2user.svg" alt="icon" />,
-    },
-    {
-      path: "/pengurus",
-      name: "pengurus",
-      icon: <img src="./sidebar/people.svg" alt="icon" />,
     },
     {
       path: "/pengaturan",

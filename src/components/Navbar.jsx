@@ -95,7 +95,7 @@ const Navbar = () => {
           )}
 
           {/* Nav nya ADD PROGRAM  */}
-          {isAddProgramNav && (
+          {/* {isAddProgramNav && (
           <>
             <div className="addProgramNav">
               <div className="navKiri">
@@ -121,7 +121,7 @@ const Navbar = () => {
               </div>
               </div>
             </>
-          )}
+          )} */}
 
           {/* Nav nya DONATUR  */}
           {isDonatur && (
@@ -198,14 +198,14 @@ const Navbar = () => {
             </>
           )}
         {/* </div> */}
-      </div>
 
       <Modal
                   show={show}
                   size="lg"
                   onHide={handleClose}
                   backdrop="static"
-                  keyboard={false}
+          keyboard={false}
+          className="iniModal"
                 >
                   <Modal.Header>
                     <Modal.Title>Verifikasi Program</Modal.Title>
@@ -297,6 +297,7 @@ const Navbar = () => {
         </Modal.Body>
         
                 </Modal>
+      </div>
     </>
   );
 };

@@ -14,7 +14,6 @@ const NavAddProgram = () => {
                 return <InformasiUmum />;
             case "FotoDetail":
                 return <FotoDetail />;
-                // return <FotoDetail />;
             default:
                 return <InformasiUmum />;
         }
