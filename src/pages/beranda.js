@@ -4,7 +4,35 @@ import { Link } from "react-router-dom";
 const Beranda = () => {
   return (
     <>
-      <section className="satu">
+    <div className="py-5">
+    <section className="satu">
+        <div className="d-flex mx-5">
+          <div
+            style={{
+              color: "black",
+              fontSize: 36,
+              fontFamily: "Inter, sans-serif",
+              fontWeight: "600",
+            }}
+          >
+            Beranda
+          </div>
+          <div className="ms-auto">
+            <img
+              style={{
+                width: 56,
+                height: 56,
+                borderRadius: 50,
+                border: "3px #009B4C solid",
+              }}
+              src="../assets/tanglet.svg"
+              alt="Tanglet Logo"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="dua">
         <div className="p-sm-5 d-sm-flex align-items-center">
           <div className="flex-shrink-0">
             <div
@@ -61,6 +89,8 @@ const Beranda = () => {
           <p className="text-success fs-4 fw-bold">Nderek Tanglet</p>
         </div>
       </section>
+    </div>
+      
     </>
   );
 };
