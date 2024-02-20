@@ -27,7 +27,7 @@ import Klikarrow from "./components/nderek tanglet/klikarrow";
 import Search from "./components/nderek tanglet/search";
 import Detailchat from "./components/nderek tanglet/detailchat";
 import Editjawaban from "./components/nderek tanglet/editjawaban";
-import Halo from "./components/nderek tanglet/halo";
+
 
 
 
@@ -63,7 +63,7 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/detailchat" element={<Detailchat />} />
             <Route path="/editjawaban" element={<Editjawaban />} />
-            <Route path="/halo" element={<Halo />} />
+            
 
 
           </Routes>

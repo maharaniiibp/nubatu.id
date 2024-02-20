@@ -117,24 +117,20 @@ const AddBerita = () => {
 
           {/* TANGGAL & JURNALIS  */}
           <Row className="tglJurnalis">
-            {/* Tanggal  */}
-            <Col className="kiri">
-              <div className="">
+          <div className="tanggal">
                 <label htmlFor="">Tanggal</label>
                 <div className="calendar">
                   <img src="./konten/calendar.svg" alt="" />
                   <input
-                    className="kiri"
+                    className="setTanggal"
                     type="text"
                     value={tanggal}
                     onChange={(e) => setTanggal(e.target.value)}
                     placeholder="Tanggal"
                   />
                 </div>
-              </div>
-            </Col>
-            <Col className="">
-              <div className="">
+            </div>
+            <div className="jurnalis">
                 <label htmlFor="">Jurnalis</label>
                 <input
                   className="kanan"
@@ -144,11 +140,11 @@ const AddBerita = () => {
                   placeholder="Nama jurnalis"
                 />
               </div>
-            </Col>
+          
           </Row>
 
           {/* TEXT EDITOR  */}
-          <Row></Row>
+          {/* <Row></Row> */}
         </form>
           <TextEditor value={konten} onChange={(value) => setKonten(value)} />
       </div>

@@ -1,13 +1,9 @@
 /* SMALL */
 @media (max-width: 425px) {
   main {
-    margin-left: calc(70px);
-
     width: 100%;
     heigth: 100%;
-    /* overflow-x: hidden; */
-    /* display: flex;
-    justify-content: center; */
+    padding: 0 20px 50px 20px;
   }
   * {
     margin: 0;
@@ -17,29 +13,21 @@
     .containerSidebarCobaLagi {
       width: 100vw;
       display: flex;
-      /* transition: margin-left 0.5s; */
+      overflow: hidden;
 
       .sidebar {
-        position: fixed; /* Atur posisi sidebar menjadi tetap */
-        top: 0; /* Atur posisi vertikalnya di bagian atas */
-        left: 0; /* Atur posisi horizontalnya di bagian kiri */
-        width: 250px; /* Tentukan lebar sidebar */
-        height: 100%;
-        background-color: #060313;
-        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 231px; /* Sesuaikan dengan kebutuhan Anda */
+        padding: 30px 15px; /* Sesuaikan dengan kebutuhan Anda */
+        background: #060313;
         height: 100vh;
-        /* width: 250px !important; */
-        padding: 30px 15px 30px 15px;
-        transition: all 0.3s;
 
-        transition: width 0.5s; /* Atur transisi untuk lebar sidebar */
-
-        /* .topSection { */
+    
         .bars {
           display: flex;
-          /* justify-content: center; */
           font-size: 25px;
-          /* background: green; */
         }
 
         .logo {
@@ -57,13 +45,11 @@
           align-items: center;
           gap: 15px;
           padding: 15px 5px 15px 10px;
-          /* color: white; */
           color: #828189;
           text-transform: capitalize;
           border-radius: 10px;
           font-size: 14px;
           white-space: nowrap;
-          /* background: rgba(255, 255, 255, 0.05) !important; */
 
           &:hover {
             background: #078d41;
@@ -87,7 +73,6 @@
           padding: 15px 5px 15px 15px;
           border-radius: 10px;
           color: #828189 !important;
-          transition: all 0.5s;
 
           &:hover {
             background: #078d41 !important;
@@ -100,19 +85,23 @@
 
           .linkText {
             font-size: 14px !important;
-            color: white;
+            color: #828189;
             text-transform: capitalize;
+
+            &:hover {
+              color: white;
+            }
           }
         }
       }
-
+      /* 
       main {
         width: 100vw;
         heigth: 100vh;
         background-color: #edf6f0;
         overflow: hidden;
         padding: 0 30px 0 30px;
-      }
+      } */
     }
   }
 }
@@ -121,41 +110,32 @@
 @media (min-width: 426px) {
   main {
     margin-left: 0;
-
     width: 100%;
     heigth: 100%;
     background-color: #edf6f0;
     overflow: hidden;
     padding: 0 30px 0 30px;
-    /* display: flex;
-      justify-content: center; */
   }
-  * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none !important;
 
     .containerSidebarCobaLagi {
       width: 100vw;
       display: flex;
-      /* transition: margin-left 0.5s; */
+      height: 100vh;
 
       .sidebar {
-        background-color: #060313;
-        color: white;
-        height: 100vh;
-        /* width: 250px !important; */
-        padding: 30px 15px 30px 15px;
-        transition: all 0.3s;
-
-        transition: width 0.5s; /* Atur transisi untuk lebar sidebar */
+        position: fixed; /* Mengatur sidebar tetap di posisi yang sama */
+        top: 0; /* Mengatur posisi vertikal di bagian atas */
+        left: 0; /* Mengatur posisi horizontal di bagian kiri */
+        width: 250px; /* Sesuaikan lebar sesuai kebutuhan Anda */
+        height: 100vh; /* Mengatur tinggi agar sesuai dengan tinggi layar */
+        padding: 30px 15px; /* Sesuaikan padding sesuai kebutuhan Anda */
+        background: #060313;
+        /* transition: all 0.5s ; */
 
         /* .topSection { */
         .bars {
           display: flex;
-          /* justify-content: center; */
           font-size: 25px;
-          /* background: green; */
         }
 
         .logo {
@@ -173,13 +153,13 @@
           align-items: center;
           gap: 15px;
           padding: 15px 5px 15px 10px;
-          /* color: white; */
           color: #828189;
           text-transform: capitalize;
           border-radius: 10px;
           font-size: 14px;
           white-space: nowrap;
-          /* background: rgba(255, 255, 255, 0.05) !important; */
+          text-decoration: none;
+          
 
           &:hover {
             background: #078d41;
@@ -203,7 +183,7 @@
           padding: 15px 5px 15px 15px;
           border-radius: 10px;
           color: #828189 !important;
-          transition: all 0.5s;
+          text-decoration: none;
 
           &:hover {
             background: #078d41 !important;
@@ -216,14 +196,17 @@
 
           .linkText {
             font-size: 14px !important;
-            color: white;
+            color: #828189;
             text-transform: capitalize;
+
+            &:hover {
+              color: white;
+            }
           }
         }
       }
     }
   }
-}
 
 /* LAPTOP */
 @media (min-width: 769px) {
@@ -238,25 +221,17 @@
       /* transition: margin-left 0.5s; */
 
       .sidebar {
-        background-color: #060313;
-        color: white;
-        height: 100vh;
-        /* width: 250px !important; */
-        padding: 30px 15px 30px 15px;
-        transition: all 0.3s;
-
-        transition: width 0.5s; /* Atur transisi untuk lebar sidebar */
-
-        position: fixed; /* Menetapkan sidebar sebagai posisi yang tetap */
-        top: 0; /* Menetapkan sidebar ke bagian atas viewport */
-        left: 0; /* Menetapkan sidebar ke kiri viewport */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px; /* Sesuaikan dengan kebutuhan Anda */
+        padding: 30px 15px; /* Sesuaikan dengan kebutuhan Anda */
+        background: #060313;
 
         /* .topSection { */
         .bars {
           display: flex;
-          /* justify-content: center; */
           font-size: 25px;
-          /* background: green; */
         }
 
         .logo {
@@ -274,13 +249,11 @@
           align-items: center;
           gap: 15px;
           padding: 15px 5px 15px 10px;
-          /* color: white; */
           color: #828189;
           text-transform: capitalize;
           border-radius: 10px;
           font-size: 14px;
           white-space: nowrap;
-          /* background: rgba(255, 255, 255, 0.05) !important; */
 
           &:hover {
             background: #078d41;
@@ -304,7 +277,6 @@
           padding: 15px 5px 15px 15px;
           border-radius: 10px;
           color: #828189 !important;
-          transition: all 0.5s;
 
           &:hover {
             background: #078d41 !important;
@@ -317,8 +289,12 @@
 
           .linkText {
             font-size: 14px !important;
-            color: white;
+            color: #828189;
             text-transform: capitalize;
+
+            &:hover {
+              color: white;
+            }
           }
         }
       }
@@ -326,13 +302,15 @@
   }
 }
 
-
 main {
-  margin-left: calc(250px);
+  /* margin-left: calc(250px); */
   width: 100%;
   background-color: #edf6f0;
   overflow: hidden;
-  padding: 0 30px 50px 30px;
+  /* padding: 0 30px 50px 30px; */
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* transition: all 0.5s; */
 }
 
 main > * {
