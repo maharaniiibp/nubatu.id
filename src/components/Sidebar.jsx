@@ -17,6 +17,12 @@ function SidebarCobaLagi({ children }) {
     }));
   };
 
+  const mainStyle = {
+    marginLeft: isOpen ? "230px" : "69px",
+    // transition: "all 0.5s",
+    height: "100vh", 
+  };
+
   const menuItem = [
     {
       path: "/beranda",
@@ -73,8 +79,14 @@ function SidebarCobaLagi({ children }) {
   ];
   return (
     <>
-      <div className="containerSidebarCobaLagi">
-        <div style={{ maxWidth: isOpen ? "250px" : "70px" }} className="sidebar">
+      {/* <div className="containerSidebarCobaLagi"> */}
+      <div className={`containerSidebarCobaLagi ${isOpen ? "open" : "closed"}`}>
+        <div
+          style={{
+            maxWidth: isOpen ? "229px" : "69px",
+            // transition: "all 0.5s",
+          }}
+          className="sidebar">
           <div
             style={{
               display: "flex",
@@ -163,7 +175,7 @@ function SidebarCobaLagi({ children }) {
             </div>
           ))}
         </div>
-        <main>{children}</main>
+        <main style={mainStyle}>{children}</main>
       </div>
     </>
   );

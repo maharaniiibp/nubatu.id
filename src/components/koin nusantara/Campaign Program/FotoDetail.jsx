@@ -3,21 +3,10 @@ import "../../css/koinNusantara/fotoDetail.css";
 // import { Row, Col } from "react-bootstrap";
 // import { ImagesearchRoller } from "@mui/icons-material";
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from "react-router-dom";
 // import ExampleCarouselImage from '../../../data/carousel.json'
 
 const FotoDetail = () => {
-  // const [files, setFiles] = useState(null);
-  // const inputRef = useRef();
-  // const handleDragOver = (event) => {
-  //   event.preventDefault();
-  // };
-  // const handleDrop = (event) => {
-  //   event.preventDefault();
-  //   setFiles(event.dataTransfer.files);
-  // };
-
-  // const handleUpload = () => {
-  // };
 
   const [images, setImages] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
@@ -82,6 +71,45 @@ const FotoDetail = () => {
   return (
     <>
       <div className="fotoDetail">
+      <div className="navPage">
+          <div className="navKiri">
+            <div className="pageName">
+              <img
+                className="arrowLeft"
+                src="./sidebar/arrow-left.svg"
+                alt=""
+              />
+              <Link to="/koin">
+                <button className="kembali">Kembali</button>
+              </Link>
+            </div>
+          </div>
+
+          <div className="navKanan">
+            <Link to="/koin">
+              <button className="simpanPengajuan">Simpan Pengajuan</button>
+            </Link>
+            <button
+              className="verifikasiProgram"
+              // onClick={handleShow}
+              disabled
+            >
+              Verifikasi Program
+            </button>
+          </div>
+        </div>
+
+        <div className="menu">
+              <nav class="nav">
+            <Link to="/addProgram" className="nav-link">
+              Informasi Umum
+            </Link>
+            <Link to="/fotoDetail" className="nav-link">
+              Foto Detail
+            </Link>
+          </nav>
+        </div>
+
         <div className="card">
         <h3>Gambar detail (3-5 diperlukan untuk mendapatkan persetujuan)</h3>
         <div

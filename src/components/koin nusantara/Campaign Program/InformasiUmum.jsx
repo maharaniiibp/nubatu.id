@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../../css/koinNusantara/informasiUmum.css";
 import { Row, Col, Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const InformasiUmum = () => {
     setFiles(event.dataTransfer.files);
   };
 
-  const handleUpload = () => {};
+  const handleUpload = () => { };
 
   // =====================
   const [image, setImage] = useState(null);
@@ -92,7 +92,6 @@ const InformasiUmum = () => {
   }
 
   // =========== FORM HANDLE TERBARU 18/FEB/2024 (13:58)
-  // Di dalam komponen InformasiUmum
 
   const [formData, setFormData] = useState({
     programName: "",
@@ -113,8 +112,6 @@ const InformasiUmum = () => {
   // Fungsi untuk menangani pengiriman formulir
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Di sini Anda dapat menambahkan logika untuk menangani pengiriman formulir,
-    // seperti mengirim data ke server atau menampilkan data ke konsol.
     console.log("Form data:", formData);
   };
 
@@ -126,58 +123,44 @@ const InformasiUmum = () => {
   };
 
   // MODAL
-  // INI BUAT MODAL PENGAJUAN
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
-  // buat verfikasi 
+  // buat verfikasi
   const [isFormFilled, setIsFormFilled] = useState(false);
 
   // Fungsi untuk memeriksa apakah semua form telah diisi
   const checkFormFilled = () => {
     // Memeriksa apakah semua nilai dalam formData tidak kosong
-    if (formData.programName && formData.description && formData.requestedFunds && formData.file) {
-      setIsFormFilled(true);
+    if (
+      formData.programName &&
+      formData.description &&
+      formData.requestedFunds &&
+      formData.file
+    ) {
+      return true;
     } else {
-      setIsFormFilled(false);
+      return false;
     }
   };
+  // const checkFormFilled = () => {
+  //   if (
+  //     formData.programName &&
+  //     formData.description &&
+  //     formData.requestedFunds &&
+  //     formData.file
+  //   ) {
+  //     setIsFormFilled(true);
+  //   } else {
+  //     setIsFormFilled(false);
+  //   }
+  // };
 
   return (
     <>
       <div className="informasiUmum">
-        <div className="nav">
-          <div className="navKiri">
-            <div className="pageName">
-              <img
-                className="arrowLeft"
-                src="./sidebar/arrow-left.svg"
-                alt=""
-              />
-              <Link to="./koin">
-                <button className="kembali">Kembali</button>
-              </Link>
-            </div>
-          </div>
-
-          <div className="navKanan">
-            <Link to="">
-              <button className="simpanPengajuan">Simpan Pengajuan</button>
-            </Link>
-            <button
-              className="verifikasiProgram"
-              onClick={handleShow}
-              // onClick={handleVerification}
-        disabled={!isFormFilled} // Tombol akan dinonaktifkan jika form belum diisi
-            >
-              Verifikasi Program
-            </button>
-          </div>
-        </div>
-
         <form onSubmit={handleSubmit}>
           <Row>
             <Col className="kiri">
@@ -203,7 +186,8 @@ const InformasiUmum = () => {
                     name="description"
                     value={formData.description}
                     onChange={handleInputChange}
-                    onBlur={checkFormFilled} // Memeriksa apakah form telah diisi setelah input berubah
+                    onBlur={checkFormFilled}
+                    // Memeriksa apakah form telah diisi setelah input berubah
                     // cols="30"
                     // rows="10"
                   ></textarea>
@@ -402,13 +386,13 @@ const InformasiUmum = () => {
 
         {/* =======MODAL BARU ======== */}
         <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
           keyboard={false}
           className="custom-modal"
-      >
-    <Modal.Header>
+        >
+          <Modal.Header>
             <Modal.Title>Verifikasi Program</Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -447,7 +431,11 @@ const InformasiUmum = () => {
                           <span>Rp</span>{" "}
                         </div>
                         {/* <p>{formData.requestedFunds}</p> */}
-                        <p>{formData.requestedFunds ? formData.requestedFunds : '-'}</p>
+                        <p>
+                          {formData.requestedFunds
+                            ? formData.requestedFunds
+                            : "-"}
+                        </p>
                       </div>
                     </Col>
                     <Col>
@@ -496,7 +484,7 @@ const InformasiUmum = () => {
               </Col>
             </Row>
           </Modal.Body>
-      </Modal>
+        </Modal>
       </div>
     </>
   );

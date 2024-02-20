@@ -1,6 +1,6 @@
 import React from 'react'
 // import dataTable from "../../../data/campaign.json";
-import "../../css/konten/srtikel.css";
+import "../../css/konten/artikel.css";
 
 const DataNama = ({item}) => {
   return (

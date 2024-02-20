@@ -1,0 +1,188 @@
+/* PHONE  */
+@media (max-width: 425px) {
+  .addBerita {
+    width: 100%;
+    background: red;
+    marign: 0;
+    padding: 0;
+
+    .addBeritaNav {
+      width: 100%;
+      padding: 30px 0;
+      margin-bottom: 10px;
+
+      .navKiri {
+        margin-bottom: 20px;
+        .pageName {
+          display: flex;
+          align-items: center;
+
+          .kembali {
+            font-size: 14px;
+            border: none;
+            background: transparent;
+          }
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .navKanan {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .simpanPengajuan {
+          background-color: transparent;
+          padding: 12px;
+          border: 1px solid #bfbfbf;
+          color: black;
+          font-size: 13px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+        }
+
+        .verifikasiProgram {
+          padding: 12px;
+          background-color: #078d41;
+          color: white;
+          font-size: 14px;
+          font-weight: semi-bold;
+          border-radius: 10px;
+          border: none;
+
+          &:disabled {
+            opacity: 0.5; /* Menurunkan opasitas tombol saat dinonaktifkan */
+            cursor: not-allowed; /* Menetapkan kursor tidak diizinkan saat tombol dinonaktifkan */
+          }
+        }
+      }
+    }
+  }
+}
+
+/* TABLET  */
+@media (min-width: 426px) {
+  .addBerita {
+    .addBeritaNav {
+        width: 100%;
+        padding: 30px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+  
+        .navKiri {
+          .pageName {
+            display: flex;
+            align-items: center;
+  
+            .kembali {
+              font-size: 14px;
+              border: none;
+              background: transparent;
+            }
+  
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+  
+        .navKanan {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+  
+          .simpanPengajuan {
+            background-color: transparent;
+            padding: 12px;
+            border: 1px solid #bfbfbf;
+            color: black;
+            font-size: 13px;
+            font-weight: semi-bold;
+            border-radius: 10px;
+          }
+  
+          .verifikasiProgram {
+            padding: 12px;
+            background-color: #078d41;
+            color: white;
+            font-size: 14px;
+            font-weight: semi-bold;
+            border-radius: 10px;
+            border: none;
+  
+            &:disabled {
+              opacity: 0.5; /* Menurunkan opasitas tombol saat dinonaktifkan */
+              cursor: not-allowed; /* Menetapkan kursor tidak diizinkan saat tombol dinonaktifkan */
+            }
+          }
+        }
+      }
+  }
+}
+
+/* LAPTOP  */
+@media (min-width: 769px) {
+  .addBerita {
+    .addBeritaNav {
+        width: 100%;
+        padding: 30px 20px;
+        margin-bottom: 10px;
+  
+        .navKiri {
+          .pageName {
+            display: flex;
+            align-items: center;
+  
+            .kembali {
+              font-size: 14px;
+              border: none;
+              background: transparent;
+            }
+  
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+  
+        .navKanan {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+  
+          .simpanPengajuan {
+            background-color: transparent;
+            padding: 12px;
+            border: 1px solid #bfbfbf;
+            color: black;
+            font-size: 13px;
+            font-weight: semi-bold;
+            border-radius: 10px;
+          }
+  
+          .verifikasiProgram {
+            padding: 12px;
+            background-color: #078d41;
+            color: white;
+            font-size: 14px;
+            font-weight: semi-bold;
+            border-radius: 10px;
+            border: none;
+  
+            &:disabled {
+              opacity: 0.5; /* Menurunkan opasitas tombol saat dinonaktifkan */
+              cursor: not-allowed; /* Menetapkan kursor tidak diizinkan saat tombol dinonaktifkan */
+            }
+          }
+        }
+      }
+  }
+}
