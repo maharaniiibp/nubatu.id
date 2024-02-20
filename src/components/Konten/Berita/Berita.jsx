@@ -130,6 +130,7 @@ const Berita = ({ data }) => {
             </div>
           </div>
 
+          <div className="tableContainer">
           <table className="table">
             <thead>
               <tr>
@@ -167,6 +168,8 @@ const Berita = ({ data }) => {
                 ))}
             </tbody>
           </table>
+          </div>
+
           <div className="paginationContainer">
             <div className="pageOf">
               <span className="page">

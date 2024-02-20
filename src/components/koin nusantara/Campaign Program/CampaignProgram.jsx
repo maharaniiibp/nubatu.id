@@ -101,6 +101,7 @@ const CampaignProgram = ({ data }) => {
     };
   }, []);
 
+  
   return (
     <>
       <div className="campaign">
@@ -231,14 +232,6 @@ const CampaignProgram = ({ data }) => {
         </div>
       </div>
 
-      {/* ============= */}
-      {/* button tambah program  */}
-      {/* <Link to="/addProgram">
-        <button className="addProgram">
-          Tambah Program
-          <img src="./koinNusantara/plus.svg" alt="" />
-        </button>
-      </Link> */}
     </>
   );
 };

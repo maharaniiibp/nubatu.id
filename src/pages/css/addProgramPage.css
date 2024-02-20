@@ -1,6 +1,6 @@
 /* PHONE  */
 @media (max-width: 425px) {
-  .navContainer {
+  .addProgramPage {
     width: 100%;
 
     .navPage {
@@ -65,7 +65,7 @@
       flex-direction: flex-wrap;
       justify-content: center;
 
-      a {
+      .nav-link {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -77,14 +77,8 @@
         border-radius: 10px;
         margin-bottom: 10px;
 
-        &:hover {
-          color: black;
+        &.informasi {
           border: 1px solid #009b4c;
-          font-weight: bold;
-        }
-
-        &:active {
-          color: black;
         }
       }
     }
@@ -93,7 +87,7 @@
 
 /* TABLET  */
 @media (min-width: 426px) {
-  .navContainer {
+  .addProgramPage {
     .navPage {
       width: 100%;
       padding: 30px 20px;
@@ -153,6 +147,8 @@
     }
 
     .menu {
+      margin-bottom: 15px;
+
       a {
         margin-right: 10px;
         text-decoration: none;
@@ -162,7 +158,11 @@
         padding: 12px 10px;
         border-radius: 10px;
 
-        &:hover {
+        &.informasi {
+          border: 1px solid #009b4c;
+        }
+
+        /* &:hover {
           color: black;
           border: 1px solid #009b4c;
           font-weight: bold;
@@ -170,44 +170,43 @@
 
         &:active {
           color: black;
-        }
+        } */
       }
     }
   }
   /* .navContainer {
-    .menu {
-      a {
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: semi-bold;
-        color: #404040;
-        padding: 12px 10px;
-        border-radius: 10px;
-
-        &:hover {
-          color: black;
-          border: 1px solid #009b4c;
-          font-weight: bold;
-        }
-
-        &:active {
-          color: black;
+      .menu {
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: semi-bold;
+          color: #404040;
+          padding: 12px 10px;
+          border-radius: 10px;
+  
+          &:hover {
+            color: black;
+            border: 1px solid #009b4c;
+            font-weight: bold;
+          }
+  
+          &:active {
+            color: black;
+          }
         }
       }
-    }
-  } */
+    } */
 }
 
 /* LAPTOP  */
 @media (min-width: 769px) {
-  .navContainer {
+  .addProgramPage {
     .navPage {
       width: 100%;
       padding: 30px 20px;
       margin-bottom: 10px;
 
       .navKiri {
-        margin-bottom: 20px;
         .pageName {
           display: flex;
           align-items: center;

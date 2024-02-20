@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { useTable, usePagination } from "react-table";
 import DataTable from "react-data-table-component";
-import dataTable from "../../../data/Artikel.json";
+import dataTable from "../../../data/artikel.json";
 import Status from "./Status";
 import DataNama from "./DataNama";
 import { Search } from "@mui/icons-material";
@@ -93,8 +93,8 @@ const Artikel = ({ data }) => {
   
   return (
     <>
-      <div className="Artikel">
-        <div className="ArtikelContainer">
+      <div className="artikel">
+        <div className="artikelContainer">
           <div className="navContainer">
             <div className="menu">
               {uniqueStatuses.map((status, index) => (
@@ -130,6 +130,7 @@ const Artikel = ({ data }) => {
             </div>
           </div>
 
+          <div className="tableContainer">
           <table className="table">
             <thead>
               <tr>
@@ -166,7 +167,9 @@ const Artikel = ({ data }) => {
                   </tr>
                 ))}
             </tbody>
-          </table>
+            </table>
+            </div>
+
           <div className="paginationContainer">
             <div className="pageOf">
               <span className="page">

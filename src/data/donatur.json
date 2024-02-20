@@ -4,6 +4,7 @@
        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
        "donatur" : "Ahmad Alamsyah Rauf",
        "bank" : "./koinNusantara/bni.svg",
+       "namaBank" : "BNI (Bank Negara Indonesia)",
        "noRek" : "0495285835",
        "nominal" : "Rp750.000"
     },
@@ -12,6 +13,7 @@
         "tglTransaksi" : "29 Nov 2023 15:23:20 WIB",
         "donatur" : "M. Fajrul Falah",
         "bank" : "./koinNusantara/bca.svg",
+        "namaBank" : "BCA (Bank Central Asia)",
         "noRek" : "0011555510",
         "nominal" : "Rp500.000"
      },
@@ -20,31 +22,9 @@
         "tglTransaksi" : "29 Nov 2023 11:56:35 WIB",
         "donatur" : "Lintang Ayu Permata",
         "bank" : "./koinNusantara/bsi.svg",
+        "namaBank" : "BSI (Bank Syariah Indonesia)",
         "noRek" : "7134559788",
         "nominal" : "Rp300.000"
-     },
-     {
-        "id" : "4",
-        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
-        "donatur" : "Ahmad Alamsyah Rauf",
-        "bank" : "bsi",
-        "noRek" : "0495285835",
-        "nominal" : "Rp750.000"
-     },
-     {
-        "id" : "5",
-        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
-        "donatur" : "Ahmad Alamsyah Rauf",
-        "bank" : "mandiri",
-        "noRek" : "0495285835",
-        "nominal" : "Rp750.000"
-     },
-     {
-        "id" : "6",
-        "tglTransaksi" : "01 Okt 2023 08:43:04 WIB",
-        "donatur" : "Ahmad Alamsyah Rauf",
-        "bank" : "bk",
-        "noRek" : "0495285835",
-        "nominal" : "Rp750.000"
      }
+    
 ]

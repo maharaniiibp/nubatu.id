@@ -69,7 +69,7 @@ const Navbar = () => {
       <div className="navbar">
         {/* <div className="navbarContainer"> */}
           {/* Nav nya KOIN  */}
-          {isKoinNav && (
+          {/* {isKoinNav && (
             <>
               <div className="koinNav">
               <div className="navKiri">
@@ -92,7 +92,7 @@ const Navbar = () => {
                 </div>
               </div>
             </>
-          )}
+          )} */}
 
           {/* Nav nya ADD PROGRAM  */}
           {/* {isAddProgramNav && (
@@ -124,7 +124,7 @@ const Navbar = () => {
           )} */}
 
           {/* Nav nya DONATUR  */}
-          {isDonatur && (
+          {/* {isDonatur && (
             <>
               <div className="navKiri">
                 <div className="pageName">
@@ -138,7 +138,7 @@ const Navbar = () => {
                 </div>
               </div>
             </>
-          )}
+          )} */}
 
           {/* Nav nya Berita */}
           {isKontenNav && (

@@ -1,10 +1,7 @@
-
 /* PHONE  */
 @media (max-width: 425px) {
-  .koinNusantara {
-    display: flex;
-  
-    .koinNav {
+  .konten {
+    .kontenNav {
       padding: 30px 0;
       display: flex;
       flex-wrap: wrap;
@@ -12,7 +9,7 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 10px;
-  
+
       .navKiri {
         max-width: 375px;
         p {
@@ -20,12 +17,12 @@
           margin: 0;
         }
       }
-  
+
       .navKanan {
         display: flex;
         align-items: center;
         gap: 12px;
-  
+
         .addProgram {
           padding: 12px 8px;
           background-color: #078d41;
@@ -42,31 +39,27 @@
             height: 17px;
           }
         }
-  
+
         .account {
-          height: 100%;
+          min-height: 100%;
+          max-height: 100%;
+          
           .photo {
-            height: 45px;
+            min-height: 45px;
+            max-height: 45px;
             border-radius: 50px;
             border: 3px solid #009b4c;
           }
         }
       }
     }
-  
-    .koinNusantaraContainer {
-      flex: 6;
-      /* background-color: blue; */
-  }
   }
 }
 
 /* TABLET  */
 @media (min-width: 426px) {
-  .koinNusantara {
-    display: flex;
-  
-    .koinNav {
+  .konten {
+    .kontenNav {
       padding: 30px 20px;
       display: flex;
       flex-wrap: wrap;
@@ -74,7 +67,7 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 10px;
-  
+
       .navKiri {
         max-width: 375px;
         p {
@@ -82,12 +75,12 @@
           margin: 0;
         }
       }
-  
+
       .navKanan {
         display: flex;
         align-items: center;
         gap: 12px;
-  
+
         .addProgram {
           padding: 12px 8px;
           background-color: #078d41;
@@ -104,31 +97,26 @@
             height: 17px;
           }
         }
-  
+
         .account {
-          height: 100%;
+          min-height: 100%;
+          max-height: 100%;
           .photo {
-            height: 45px;
+            min-height: 45px;
+            max-height: 45px;
             border-radius: 50px;
             border: 3px solid #009b4c;
           }
         }
       }
     }
-  
-    .koinNusantaraContainer {
-      flex: 6;
-      /* background-color: blue; */
-  }
   }
 }
 
 /* LAPTOP  */
 @media (min-width: 769px) {
-  .koinNusantara {
-    display: flex;
-  
-    .koinNav {
+  .konten {
+    .kontenNav {
       padding: 30px 20px;
       display: flex;
       flex-wrap: wrap;
@@ -136,7 +124,7 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 10px;
-  
+
       .navKiri {
         max-width: 375px;
         p {
@@ -144,12 +132,12 @@
           margin: 0;
         }
       }
-  
+
       .navKanan {
         display: flex;
         align-items: center;
         gap: 12px;
-  
+
         .addProgram {
           padding: 12px 8px;
           background-color: #078d41;
@@ -166,25 +154,18 @@
             height: 17px;
           }
         }
-  
+
         .account {
-          height: 100%;
+          min-height: 100%;
+          max-height: 100%;
           .photo {
-            height: 45px;
+            min-height: 45px;
+            max-height: 45px;
             border-radius: 50px;
             border: 3px solid #009b4c;
           }
         }
       }
     }
-  
-    .koinNusantaraContainer {
-      flex: 6;
-      /* background-color: blue; */
   }
-  }
-}
-
-/* LAPTOP L  */
-@media (min-width: 1025px) {
 }
