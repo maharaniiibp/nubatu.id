@@ -5,13 +5,16 @@ import NavNderek from "../components/nderek tanglet/navnderek";
 const NderekTanglet = () => {
   return (
     <>
-      <section className="satu">
+    <div className="py-5"> 
+    <section className="satu ">
         <NavNderek />
       </section>
 
       <section className="tiga">
         <Tabeltanglet />
       </section>
+    </div>
+      
     </>
   );
 };

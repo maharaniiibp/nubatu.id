@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import NavNderek from "./navnderek";
+import { useNavigate } from 'react-router-dom';
+
 
 const KlikArrow = () => {
+  const navigate = useNavigate();
   const [selectedRows, setSelectedRows] = useState([]);
   const [selectAll, setSelectAll] = useState(false);
   const [showCheckboxes] = useState(true);
   const [rowBackground, setRowBackground] = useState({});
   const [rowFontWeight, setRowFontWeight] = useState({});
+
+  const handleClick = () => {
+    navigate('/nderektanglet')
+  };
 
   const handleCheckboxChange = (rowId) => {
     if (selectedRows.includes(rowId)) {
@@ -37,7 +44,7 @@ const KlikArrow = () => {
 
 
   return (
-    <div>
+    <div className="py-5">
       <section className="satu">
         <NavNderek />
       </section>
@@ -53,7 +60,7 @@ const KlikArrow = () => {
               />
             </div>
             <div className="col">
-              <Link to="/klikarrow">
+              <Link to="/nderektanglet">
                 <img
                   className="mb-1 mx-2"
                   src="../assets/arrow-down.svg"
@@ -147,7 +154,7 @@ const KlikArrow = () => {
                 style={{
                   color: "#252C32",
                   fontWeight: rowFontWeight[1] || "normal",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: "Inter",
                 }}
               >
@@ -220,7 +227,7 @@ const KlikArrow = () => {
                 style={{
                   color: "#252C32",
                   fontWeight: rowFontWeight[2] || "normal",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: "Inter",
                 }}
               >
@@ -293,7 +300,7 @@ const KlikArrow = () => {
                 style={{
                   color: "#252C32",
                   fontWeight: rowFontWeight[3] || "normal",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: "Inter",
                 }}
               >
@@ -366,7 +373,7 @@ const KlikArrow = () => {
                 style={{
                   color: "#252C32",
                   fontWeight: rowFontWeight[4] || "normal",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: "Inter",
                 }}
               >
@@ -401,15 +408,17 @@ const KlikArrow = () => {
             Page 1 of 1
           </div>
           <div
-            className="col-auto mx-2 border border-secondary rounded p-2"
-            style={{
-              color: "#344054",
-              fontSize: 14,
-              fontFamily: "Inter",
-            }}
-          >
-            Previous
-          </div>
+      className="col-auto mx-2 border border-secondary rounded p-2"
+      style={{
+        color: "#344054",
+        fontSize: 14,
+        fontFamily: "Inter",
+        cursor: "pointer" 
+      }}
+      onClick={handleClick} 
+    >
+      Previous
+    </div>
           <div
             className="col-auto mx-2 border border-secondary rounded p-2"
             style={{

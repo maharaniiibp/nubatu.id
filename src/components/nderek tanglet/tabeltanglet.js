@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import NavNderek from "./navnderek";
+import { useNavigate } from 'react-router-dom';
 
 const TabelTanglet = () => {
+  const navigate = useNavigate();
   const [selectedRows, setSelectedRows] = useState([]);
   const [selectAll, setSelectAll] = useState(false);
   const [showCheckboxes, setShowCheckboxes] = useState(true);
   const [rowBackground, setRowBackground] = useState({});
   const [rowFontWeight, setRowFontWeight] = useState({});
+
+  const handleClick = () => {
+    navigate('/klikarrow')
+  };
 
   const handleCheckboxChange = (rowId) => {
     if (selectedRows.includes(rowId)) {
@@ -37,6 +42,7 @@ const TabelTanglet = () => {
   const handleRefreshClick = () => {
     window.location.reload();
   };
+
 
   return (
     <div>
@@ -101,35 +107,35 @@ const TabelTanglet = () => {
                 />
               </div>
               <Link to="/detailchat">
-              <div
-                className="col"
-                style={{
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: rowFontWeight[1] || "normal",
-                  color: "#252C32",
-                  fontSize: 14,
-                }}
-              >
-                Ziyad Ahmad Baharuddin
-                <span
+                <div
+                  className="col"
                   style={{
-                    color: "#5E7080",
-                    fontSize: 12,
-                    fontFamily: "Inter",
-                    display: "block", // Tampilkan di bawah nama pada perangkat mobile
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: rowFontWeight[1] || "normal",
+                    color: "#252C32",
+                    fontSize: 14,
                   }}
                 >
-                  ziyadbaharuddin @gmail.com
-                </span>
-              </div>
+                  Ziyad Ahmad Baharuddin
+                  <span
+                    style={{
+                      color: "#5E7080",
+                      fontSize: 12,
+                      fontFamily: "Inter",
+                      display: "block", // Tampilkan di bawah nama pada perangkat mobile
+                    }}
+                  >
+                    ziyadbaharuddin @gmail.com
+                  </span>
+                </div>
               </Link>
-             
+
               <div
                 className="col "
                 style={{
                   color: "#252C32",
                   fontWeight: rowFontWeight[1] || "normal",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: "Inter",
                 }}
               >
@@ -176,33 +182,37 @@ const TabelTanglet = () => {
                   alt="Tanglet Logo"
                 />
               </div>
-              <div
-                className="col"
-                style={{
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: rowFontWeight[2] || "normal",
-                  color: "#252C32",
-                  fontSize: 14,
-                }}
-              >
-                Zirma Ahmad Baharuddin
-                <span
+
+              <Link to="/detailchat">
+                <div
+                  className="col"
                   style={{
-                    color: "#5E7080",
-                    fontSize: 12,
-                    fontFamily: "Inter",
-                    display: "block", // Tampilkan di bawah nama pada perangkat mobile
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: rowFontWeight[2] || "normal",
+                    color: "#252C32",
+                    fontSize: 14,
                   }}
                 >
-                  zirmabaharuddin @gmail.com
-                </span>
-              </div>
+                  Zirma Ahmad Baharuddin
+                  <span
+                    style={{
+                      color: "#5E7080",
+                      fontSize: 12,
+                      fontFamily: "Inter",
+                      display: "block", // Tampilkan di bawah nama pada perangkat mobile
+                    }}
+                  >
+                    zirmabaharuddin @gmail.com
+                  </span>
+                </div>
+              </Link>
+
               <div
                 className="col "
                 style={{
                   color: "#252C32",
                   fontWeight: rowFontWeight[2] || "normal",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: "Inter",
                 }}
               >
@@ -249,33 +259,37 @@ const TabelTanglet = () => {
                   alt="Tanglet Logo"
                 />
               </div>
-              <div
-                className="col"
-                style={{
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: rowFontWeight[3] || "normal",
-                  color: "#252C32",
-                  fontSize: 14,
-                }}
-              >
-                Zahra Ahmad Baharuddin
-                <span
+
+              <Link to="/detailchat">
+                <div
+                  className="col"
                   style={{
-                    color: "#5E7080",
-                    fontSize: 12,
-                    fontFamily: "Inter",
-                    display: "block", // Tampilkan di bawah nama pada perangkat mobile
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: rowFontWeight[3] || "normal",
+                    color: "#252C32",
+                    fontSize: 14,
                   }}
                 >
-                  zahrabaharuddin @gmail.com
-                </span>
-              </div>
+                  Zahra Ahmad Baharuddin
+                  <span
+                    style={{
+                      color: "#5E7080",
+                      fontSize: 12,
+                      fontFamily: "Inter",
+                      display: "block", // Tampilkan di bawah nama pada perangkat mobile
+                    }}
+                  >
+                    zahrabaharuddin @gmail.com
+                  </span>
+                </div>
+              </Link>
+
               <div
                 className="col "
                 style={{
                   color: "#252C32",
                   fontWeight: rowFontWeight[3] || "normal",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: "Inter",
                 }}
               >
@@ -322,33 +336,35 @@ const TabelTanglet = () => {
                   alt="Tanglet Logo"
                 />
               </div>
-              <div
-                className="col"
-                style={{
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: rowFontWeight[4] || "normal",
-                  color: "#252C32",
-                  fontSize: 14,
-                }}
-              >
-                Zalfa Ahmad Baharuddin
-                <span
+              <Link to="/detailchat">
+                <div
+                  className="col"
                   style={{
-                    color: "#5E7080",
-                    fontSize: 12,
-                    fontFamily: "Inter",
-                    display: "block", // Tampilkan di bawah nama pada perangkat mobile
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: rowFontWeight[4] || "normal",
+                    color: "#252C32",
+                    fontSize: 14,
                   }}
                 >
-                  zalfabaharuddin @gmail.com
-                </span>
-              </div>
+                  Zalfa Ahmad Baharuddin
+                  <span
+                    style={{
+                      color: "#5E7080",
+                      fontSize: 12,
+                      fontFamily: "Inter",
+                      display: "block", // Tampilkan di bawah nama pada perangkat mobile
+                    }}
+                  >
+                    zalfabaharuddin @gmail.com
+                  </span>
+                </div>
+              </Link>
               <div
                 className="col "
                 style={{
                   color: "#252C32",
                   fontWeight: rowFontWeight[4] || "normal",
-                  fontSize: 14,
+                  fontSize: 12,
                   fontFamily: "Inter",
                 }}
               >
@@ -370,7 +386,6 @@ const TabelTanglet = () => {
             </div>
           </div>
         </div>
-
         <div className="row py-4 fw-bolder">
           <div
             class="col-auto me-auto"
@@ -392,16 +407,19 @@ const TabelTanglet = () => {
           >
             Previous
           </div>
-          <div
-            className="col-auto mx-2 border border-secondary rounded p-2"
-            style={{
-              color: "#344054",
-              fontSize: 14,
-              fontFamily: "Inter",
-            }}
-          >
-            Next
-          </div>
+        
+        <div
+      className="col-auto mx-2 border border-secondary rounded p-2"
+      style={{
+        color: "#344054",
+        fontSize: 14,
+        fontFamily: "Inter",
+        cursor: "pointer" 
+      }}
+      onClick={handleClick} 
+    >
+      Next
+    </div>
         </div>
       </section>
       <div className="py-5"></div>

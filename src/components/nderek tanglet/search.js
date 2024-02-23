@@ -63,7 +63,7 @@ const Search = () => {
   };
 
   return (
-    <div>
+    <div className="py-5">
       <section className="satu mx-4">
         <div className="d-flex mb-3  ">
           <div
@@ -200,7 +200,7 @@ const Search = () => {
                   style={{
                     color: "#252C32",
                     fontWeight: rowFontWeight[row.id] || "normal",
-                    fontSize: 14,
+                    fontSize: 12,
                     fontFamily: "Inter",
                   }}
                 >
